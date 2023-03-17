@@ -317,6 +317,7 @@ body {
 
 /*Image gallery*/
 .image-gallery {
+  margin-top: 30px;
   width: 100%;
   overflow-x: scroll;
   white-space: nowrap;
@@ -427,6 +428,16 @@ td {
   margin-top: 60px;
   padding: 20px;
 }
+.container-bike-rental button {
+  background-color: #ff4040;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
 .section-br {
   margin: 20px 0;
   text-align: center;
@@ -434,7 +445,6 @@ td {
 
 .image-bikes h4 {
   display: flex;
-  justify-content:center;
 }
 
 .image-section2 {
