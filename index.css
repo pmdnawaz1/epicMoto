@@ -331,9 +331,28 @@ body {
 /*Image gallery*/
 .image-gallery {
   margin-top: 30px;
+  margin-right: 20px;
   width: 100%;
-  overflow-x: scroll;
+  max-width: 800px;
+  max-height: 500px;
+  overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-gallery::-webkit-scrollbar {
+  height: 10px;
+}
+
+.image-gallery::-webkit-scrollbar-thumb {
+  background-color: #ff5a5f;
+  border-radius: 10px;
 }
 
 .image-gallery-inner {
@@ -348,16 +367,6 @@ body {
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-  .image-gallery {
-    white-space: normal;
-  }
-
-  .image-gallery img {
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
-}
 /*Table*/
 .container-table {
   display: flex;
@@ -440,7 +449,7 @@ td {
   height: 300px;
 }
 @media (max-width: 600px) {
-  .contact-container{
+  .contact-container {
     flex-direction: column;
     margin-top: 15px;
   }
