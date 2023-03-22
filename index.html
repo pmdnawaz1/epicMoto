@@ -20,53 +20,60 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script
+      type="text/javascript"
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    ></script>
   </head>
 
   <body onload="initMap()">
-    <!-- Sticky header with logo and navigation links -->
-    <div class="header">
-      <div class="logo">
-        <img src="logo/logo.webp" />
-      </div>
-      <div class="header-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#tandc">Terms and conditions</a>
-        <a href="#contact">Contact</a>
-        <a href="#tours">Tours</a>
-        <a href="#bike-rental">Bike Rentals</a>
-        <div class="header-buttons">
-          <a href="#" class="contact-btn">Contact Us</a>
-          <a href="#" class="email-btn">Email Us</a>
-        </div>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/logo/logo.webp" alt="Logo" width="80" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+        <span class="close-icon">&times;</span>
+      </button>
 
-      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <ul class="mobile-menu">
-          <a href="#home">Home</a>
-          <a href="#tandc">Terms and conditions</a>
-          <a href="#contact">Contact</a>
-          <a href="#tours">Tours</a>
-          <a href="#bike-rental">Bike Rentals</a>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tours">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tandc">T&amp;C</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bike-rental">Bike Rentals</a>
+          </li>
         </ul>
-        <div class="header-buttons">
-          <a href="#" class="contact-btn">Contact Us</a>
-          <a href="#" class="email-btn">Email Us</a>
-        </div>
       </div>
-      <script>
-        function toggleMobileMenu(menu) {
-          menu.classList.toggle("open");
-        }
-      </script>
-    </div>
+    </nav>
     <div class="content-wrapper">
       <!-- Main content -->
       <div id="home" class="content active">
         <!-- Image Coursel-->
-        <div class="container">
+        <div class="container" style="margin-top: 9em">
           <div class="left-section">
             <h2>Begin your expedition into <br />the extraordinary with</h2>
             <h2 style="color: #ff4040; text-decoration: underline">
@@ -85,13 +92,11 @@
             </button>
           </div>
           <div class="right-section">
-            <div class="grid">
+            <div class="image-grid">
               <img src="/Images/IMG_8705.jpg" />
               <img src="/Images/IMG_8706.jpg" />
               <img src="/Images/IMG_8713.jpg" />
               <img src="/Images/IMG_8740.jpg" />
-              <img src="/Images/IMG_8744.jpg" />
-              <img src="/Images/IMG_8851.jpg" />
             </div>
           </div>
         </div>
@@ -257,7 +262,7 @@
       </div>
       <!--Terms and conditions-->
       <div id="tandc" class="content">
-        <div class="container-text">
+        <div class="text-container" style="padding: 2em">
           <h1>Terms & Conditions</h1>
           <p>
             EPIC TOURS is an operator of all Moto Tours on our website. Epic
@@ -377,27 +382,26 @@
             jeep
           </p>
           <h3>Booking, Cancellation & Refund</h3>
-
-          <div class="container-table">
-            <table>
-              <tr>
-                <td><h4 style="color: #ff4040">Date of Cancellation</h4></td>
-                <td><h4 style="color: #ff4040">Charge Incurred</h4></td>
-              </tr>
-              <tr>
-                <td>More than 90 days before departure</td>
-                <td>0% of the total trip cost</td>
-              </tr>
-              <tr>
-                <td>90 days to 60 days before departure</td>
-                <td>25% of total trip cost</td>
-              </tr>
-              <tr>
-                <td>60 days to 30 days months before departure</td>
-                <td>50% of total trip cost</td>
-              </tr>
-            </table>
-          </div>
+        </div>
+        <div class="container-table">
+          <table>
+            <tr>
+              <td><h4 style="color: #ff4040">Date of Cancellation</h4></td>
+              <td><h4 style="color: #ff4040">Charge Incurred</h4></td>
+            </tr>
+            <tr>
+              <td>More than 90 days before departure</td>
+              <td>0% of the total trip cost</td>
+            </tr>
+            <tr>
+              <td>90 days to 60 days before departure</td>
+              <td>25% of total trip cost</td>
+            </tr>
+            <tr>
+              <td>60 days to 30 days months before departure</td>
+              <td>50% of total trip cost</td>
+            </tr>
+          </table>
         </div>
       </div>
 
@@ -461,31 +465,36 @@
           <div class="image-bikes">
             <div class="row">
               <div class="col-md-4">
-                <img src="/Images/IMG_8325.jpg" />
+                <img src="" />
                 <h4>Suzuki</h4>
               </div>
               <div class="col-md-4">
-                <img src="/Images/Untitled-3.jpg" />
+                <img src="" />
                 <h4>NS</h4>
               </div>
               <div class="col-md-4">
-                <img src="/Images/IMG_9136.jpg" />
+                <img src="" />
                 <h4>RE</h4>
               </div>
               <div class="col-md-4">
-                <img src="/Images/IMG_9127.jpg" />
+                <img src="" />
                 <h4>RC</h4>
               </div>
               <div class="col-md-4">
-                <img src="/Images/IMG_9125.jpg" />
+                <img src="" />
                 <h4>Duke</h4>
               </div>
               <div class="col-md-4">
-                <img src="/Images/IMG_9108.jpg" />
+                <img src="" />
                 <h4>Hunter</h4>
               </div>
             </div>
           </div>
+          <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+          ></script>
 
           <div style="margin-top: 20px; padding-left: 20px">
             <h3>Exploring the Heartof Manali the Snow-Capped Treasure</h3>
@@ -524,7 +533,7 @@
               </p>
             </div>
             <div class="image-block col-sm-6">
-              <img src="/Images/IMG_8851.jpg" />
+              <img src="/Images/IMG_8085.jpg" />
 
               <h3>Hadimba Temple</h3>
               <p>
@@ -536,7 +545,7 @@
               </p>
             </div>
             <div class="image-block col-sm-6">
-              <img src="/Images/IMG_8750.jpg" />
+              <img src="/Images/IMG_8319.jpg" />
 
               <h3>Nyingmapa Buddhist Temple</h3>
               <p>
@@ -548,7 +557,7 @@
               </p>
             </div>
             <div class="image-block col-sm-6">
-              <img src="/Images/IMG_8745.jpg" />
+              <img src="/Images/IMG_8340.jpg" />
 
               <h3>Solang Valley</h3>
               <p>
@@ -572,7 +581,7 @@
               </p>
             </div>
             <div class="image-block col-sm-6">
-              <img src="/Images/IMG_8735.jpg" />
+              <img src="/Images/IMG_8713.jpg" />
 
               <h3>Hampta Pass</h3>
               <p>
@@ -591,22 +600,21 @@
         <Imgaes-Tour>
           <div class="row small">
             <div class="imagegroup" style="animation-delay: 1s">
-              <img src="https://picsum.photos/seed/3/342/180" alt="" />
-              <img src="https://picsum.photos/seed/4/342/180" alt="" />
-              <img src="https://picsum.photos/seed/5/342/180" alt="" />
-              <img src="https://picsum.photos/seed/6/342/180" alt="" />
-              <img src="https://picsum.photos/seed/7/342/180" alt="" />
-              <img src="https://picsum.photos/seed/8/342/180" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
+              <img src="" alt="" />
             </div>
           </div>
           <div class="row large">
             <div class="imagegroup" style="border: 2px solid white">
-              <img src="https://picsum.photos/seed/1/1024/480" alt="" />
-              <img src="https://picsum.photos/seed/2/1024/480" alt="" />
+              <img src="" alt="" />
             </div>
           </div>
         </Imgaes-Tour>
-        <div class="container-text">
+        <div class="text-container">
           <h3>Tours</h3>
           <p>
             Accept challenges, and embrace discomfort in the natural wilderness
@@ -631,7 +639,7 @@
             </div>
 
             <div class="col-md-4">
-              <img src="/Images/IMG_8719.jpg" />
+              <img src="" />
 
               <h3 style="color: #ff4040">Trans Himalaya Motorcycle Tour</h3>
               <p>
@@ -645,11 +653,20 @@
     </div>
 
     <script>
-      const links = document.querySelectorAll(".header-links a");
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      const navbarMenu = document.querySelector(".navbar-collapse");
+
+      navbarToggler.addEventListener("click", function () {
+        navbarMenu.classList.toggle("show");
+      });
+
+      const links = document.querySelectorAll(".navbar-nav a");
       const contentDivs = document.querySelectorAll(".content");
+
       links.forEach(function (link) {
         link.addEventListener("click", function (event) {
           event.preventDefault();
+          navbarMenu.classList.remove("show");
           links.forEach(function (link) {
             link.classList.remove("active");
           });
