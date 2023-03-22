@@ -1,19 +1,26 @@
-/* Sticky header */
 * {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 1.625;
-  color: rgb(48, 45, 45);
-  font-family: "Raleway", sans-serif;
+  color: rgb(0, 0, 0);
+  font-family: "Avenir LT Std", sans-serif;
+
   margin: 0;
   padding: 0;
 }
 body {
   margin: 0;
 }
-.container-m {
-  margin: 80px;
+h1 h2 h3 h4 h5 {
+  font-family: "Raleway", sans-serif;
 }
+h1 {
+  font-size: 54px;
+}
+h2 {
+  font-size: 30px;
+}
+
 .content {
   display: none;
 }
@@ -25,7 +32,7 @@ body {
 .navbar-nav li a {
   color: black;
 }
-.navbar-nav li a:hover {
+.navbar-nav li:hover {
   color: #ff4040;
 }
 .close-icon {
@@ -44,15 +51,15 @@ body {
   color: #fff;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 12px;
-  padding: 8px 16px;
-  margin-left: 5px;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  margin-right: 5px;
 }
 
 .email-btn {
   background-color: #fff;
   color: #000;
-  border: 1px solid black;
+  border: 1px solid rgb(85, 85, 85);
 }
 .contact-btn:hover {
   text-decoration: none;
@@ -65,52 +72,7 @@ body {
   color: #000;
   border: 1px solid black;
 }
-
-@media (max-width: 768px) {
-  .contact-btn,
-  .email-btn {
-    font-size: 14px;
-    padding: 8px 16px;
-    margin-left: 5px;
-  }
-}
-
-@media (max-width: 400) {
-  .contact-btn,
-  .email-btn {
-    font-size: 8px;
-    padding: 6px 12px;
-    margin-left: 3px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .header-links {
-    display: none;
-  }
-
-  #hamburger-icon {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-.contact-btn,
-.email-btn {
-  display: none;
-}
-
 /* Responsive styles */
-@media screen and (max-width: 600px) {
-  .contact-btn,
-  .email-btn {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-  .container-m {
-    margin: 150px;
-  }
-}
 
 .container {
   display: flex;
@@ -161,7 +123,7 @@ body {
 }
 
 .right-section img {
-  border: 1px solid #ff4040;
+  border: 1px solid #fff0f0;
 }
 
 .image-grid {
@@ -425,33 +387,34 @@ td {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 1.2em 0;
 }
 
-.image-block {
-  width: calc(20%-10px);
-  margin-bottom: 20px;
+.img-block {
+  width: calc(20%-0.8em);
+  margin-bottom: 1.2em;
   text-align: center;
 }
 
-.image-block img {
+.img-block img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.image-block h3 {
+.img-block h3 {
   margin: 10px 0;
   font-size: 20px;
   font-weight: bold;
 }
 
-.image-block p {
+.img-block p {
   margin: 0;
   font-size: 14px;
 }
 
+/* 
 .row {
   display: flex;
   overflow: hidden;
@@ -476,4 +439,18 @@ td {
   50% {
     transform: translate3d(-100%, 0, 0);
   }
+} */
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.whatsapp-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
