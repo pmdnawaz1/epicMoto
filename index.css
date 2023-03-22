@@ -323,6 +323,14 @@ h2 {
   }
 }
 /*TandC*/
+@media (max-width: 400px) {
+  .text-container {
+    padding: 0em;
+  }
+}
+.text-container {
+  padding: 2em;
+}
 
 .container-table {
   display: flex;
@@ -443,8 +451,8 @@ td {
 
 .whatsapp-icon {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 2.2em;
+  right: 2em;
   z-index: 9999;
 }
 
@@ -453,4 +461,10 @@ td {
   height: 80px;
   border-radius: 50%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 400px) {
+  .whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+  }
 }
