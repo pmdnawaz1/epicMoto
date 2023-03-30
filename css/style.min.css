@@ -70,9 +70,10 @@ body .slider-container.first-sample .next-slide {
 
 @media screen and (max-width: 600px) {
   body .slider-container.first-sample {
-    width: 250px;
-    height: 250px;
-    border: 1px solid #ff4040;
-    margin: 0 auto 50px;
+    display:none;
   }
 }
+
+
+
+

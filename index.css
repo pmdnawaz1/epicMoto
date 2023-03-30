@@ -29,31 +29,104 @@ h2 {
   display: block;
 }
 
-.navbar-nav li a {
-  color: black;
+.page-header {
+  background-color: white;
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-between;
 }
-.navbar-nav li:hover {
+.logo {
+  color: white;
+  align-self: center;
+  margin-left: 1.2rem;
+  font-size: 2.5rem;
+}
+
+.nav-bar {
+  margin: auto;
+}
+
+.nav-bar a {
+  color: black;
+  padding: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.nav-bar a:hover {
   color: #ff4040;
 }
-.close-icon {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 1.5rem;
-  color: black;
+
+.menu-icon {
+  color: white;
   cursor: pointer;
+  display: none;
+}
+
+.b1 {
+  background-color: hsl(0, 100%, 92%);
+  border-radius: 25px;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border: none;
+  color: #ff4040;
+}
+.b2 {
+  background-color: #fff;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  border: none;
+}
+.b1:hover,
+.b2:hover {
+  background-color: #ff4040;
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-bar {
+    display: none;
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+  }
+
+  .nav-bar.responsive {
+    display: block;
+  }
+
+  .nav-bar a {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    z-index: 1;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
 }
 
 /* Contact and email buttons */
-.contact-btn,
+/* .contact-btn,
 .email-btn {
   background-color: #ff4040;
-  color: #fff;
+  color: #ff4040;
   border-radius: 10px;
   text-decoration: none;
   font-size: 1em;
   padding: 0.5em 1em;
   margin-right: 5px;
+  transition: color 0.4s ease 0s;
 }
 
 .email-btn {
@@ -71,7 +144,8 @@ h2 {
   text-decoration: none;
   color: #000;
   border: 1px solid black;
-}
+} */
+
 /* Responsive styles */
 
 .container {
@@ -80,6 +154,7 @@ h2 {
   gap: 10em;
   margin-bottom: 3em;
   min-height: 20em;
+  justify-content: space-around;
 }
 
 .right-section {
@@ -119,7 +194,8 @@ h2 {
   margin-right: 10px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 25px;
+  border: none;
 }
 
 .right-section img {
@@ -128,14 +204,15 @@ h2 {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   object-fit: cover;
+  gap: 0.3rem;
 }
 
 .image-grid img {
   width: 100%;
-  height: auto;
+  height: 270px;
 }
 
 .carousel-item img {
@@ -185,6 +262,7 @@ h2 {
     margin-top: 5px;
     margin-left: 3px;
   }
+  
 }
 
 .carousel-item {

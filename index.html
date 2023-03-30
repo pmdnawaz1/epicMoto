@@ -19,6 +19,10 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="css/blue-slider.min.css" />
     <link rel="stylesheet" href="css/fontello.css" />
@@ -32,60 +36,43 @@
   </head>
 
   <body onload="initMap()">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="/logo/logo.webp" alt="Logo" width="80" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-        <span class="close-icon">&times;</span>
-      </button>
-
-      <div
-        class="collapse navbar-collapse justify-content-center"
-        id="navbarNav"
-      >
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#bike-rental">Bike Rentals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tours">Tours</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tandc">T&amp;C</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-        <div class="header-buttons">
-          <a href="#" class="contact-btn">Contact Us</a>
-          <a href="#" class="email-btn"
-            ><i class="fas fa-envelope"></i> Email Us</a
-          >
-        </div>
+    <!-- Navigation bar with links -->
+    <div class="page-header">
+      <div class="logo">
+        <img src="/logo/logo.webp" />
       </div>
-    </nav>
+      <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+      <div id="navigation-bar" class="nav-bar">
+        <a id="home-link" href="#home" class="active" onclick="showPage('home');hideNavBar()">Home</a>
+        <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()">Tours</a>
+        <a id="bike-rental-link" href="#bike-rental" onclick="showPage('bike-rental');hideNavBar()">Bike Rentals</a>
+        <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()">Terms and conditions</a>
+        <a id="contact-link" href="#contact" onclick="showPage('contact');hideNavBar()">Contact us</a>
+        <button class="b1">8894777300|info@epicmototours.com</button>
+        <button class="b2">Contact</button>
+      </div>
+    </div>
+    <script>
+      function onMenuClick() {
+        var navbar = document.getElementById("navigation-bar");
+        var responsive_class_name = "responsive";
+
+        navbar.classList.toggle(responsive_class_name);
+      }
+      function hideNavBar() {
+    document.getElementById("navigation-bar").classList.remove("show");
+  }
+    </script>
+
     <div class="content-wrapper">
       <!-- Main content -->
       <div id="home" class="content active">
         <div class="container">
           <div class="left-section">
-            <h1>Begin your expedition into <br />the extraordinary with</h1>
+            <h1>Begin your expedition into the extraordinary with</h1>
             <h1 style="color: #ff4040; text-decoration: underline">
               Epicmototours
             </h1>
@@ -97,20 +84,18 @@
               Stories that are worth listening to & sharing.
             </p>
             <button>Contact Us</button>
-            <button style="background-color: #fff; color: #000">
+            <button style="background-color: #fff; color: #000;border: 1px solid black;">
               Learn More
             </button>
           </div>
           <div class="right-section">
             <div class="image-grid">
-              <img src="/Images/IMG_8706.jpg" />
-              <img src="/Images/IMG_8713.jpg" />
-              <img src="/Images/IMG_8719.jpg" />
-              <img src="/Images/IMG_8727.jpg" />
-              <img src="/Images/IMG_8740.jpg" />
-              <img src="/Images/IMG_8744.jpg" />
-              <img src="/Images/IMG_8851.jpg" />
-              <img src="/Images/IMG_9007.jpg" />
+              <img src="/Images/main/IMG_20230331_021739.jpg" />
+              <img src="/Images/main/IMG_20230331_021759.jpg" />
+              <img src="/Images/main/IMG_20230331_021817.jpg" />
+              <img src="/Images/main/IMG_20230331_021834.jpg" />
+              <img src="/Images/main/IMG_20230331_021902.jpg" />
+              <img src="/Images/main/IMG_20230331_021919.jpg" />
             </div>
           </div>
         </div>
@@ -153,7 +138,7 @@
             </p>
             <button>Contact</button>
           </div>
-          <div class="right-section">
+          <div class="right-section bike-main">
             <div
               id="carouselExampleControls"
               class="carousel slide"
@@ -230,16 +215,7 @@
               tours in the Himalayas. We offer guided and custom Motorcycle
               tours on the legendary Royal Enfields. This machine is made for
               perfect adventure travel. There's always a new route being
-              explored in the Himalayas by these bikes.All our Tour Guides come
-              with years of riding experience in local conditions, some have
-              extensive knowledge and experitise in particular areas. Our
-              Ecosystem provides flexibility to every rider to choose the
-              destinations according to their riding preferences, be it
-              Adventure motorcycle Tours, or cultural or Leisure motorcycle
-              tours. We preferable use country roads to explore the region by
-              riding through the Himalayan Mountains.For an Adventure of a
-              lifetime, you can't get much better than a motorcycle ride with
-              Epic moto tours.
+              explored in the Himalayas by these bikes.
             </p>
             <button>Contact</button>
           </div>
@@ -273,6 +249,8 @@
             crossorigin="anonymous"
           ></script>
         </div>
+        
+
       </div>
       <!--Terms and conditions-->
       <div id="tandc" class="content">
@@ -524,7 +502,7 @@
           ></script>
 
           <div style="margin-top: 20px; padding-left: 20px">
-            <h3>Exploring the Heartof Manali the Snow-Capped Treasure</h3>
+            <h1>Exploring the Heartof Manali the Snow-Capped Treasure</h1>
             <p>
               Whether you're travelling alone to find inner peace, going on an
               adventure backpacking trip with your besties, or taking your
@@ -610,7 +588,7 @@
           </div>
         </div>
       </div>
-      <div id="tours" class="content" style="padding: 5em">
+      <div id="tours" class="content">
         <div class="text-container">
           <h2>Tours</h2>
           <p>
@@ -645,32 +623,18 @@
     </div>
 
     <script>
-      const navbarToggler = document.querySelector(".navbar-toggler");
-      const navbarMenu = document.querySelector(".navbar-collapse");
+      function showPage(pageId) {
+  const pageContents = document.getElementsByClassName("content");
+  for (let i = 0; i < pageContents.length; i++) {
+    if (pageContents[i].id === pageId) {
+      pageContents[i].style.display = "block";
+    } else {
+      pageContents[i].style.display = "none";
+    }
+  }
+  
+}
 
-      navbarToggler.addEventListener("click", function () {
-        navbarMenu.classList.toggle("show");
-      });
-
-      const links = document.querySelectorAll(".navbar-nav a");
-      const contentDivs = document.querySelectorAll(".content");
-
-      links.forEach(function (link) {
-        link.addEventListener("click", function (event) {
-          event.preventDefault();
-          navbarMenu.classList.remove("show");
-          links.forEach(function (link) {
-            link.classList.remove("active");
-          });
-          link.classList.add("active");
-          contentDivs.forEach(function (div) {
-            div.classList.remove("active");
-          });
-          const targetDivId = link.getAttribute("href").substring(1);
-          const targetDiv = document.getElementById(targetDivId);
-          targetDiv.classList.add("active");
-        });
-      });
     </script>
     <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-icon">
       <img src="/logo/whatsapp.png" alt="WhatsApp Icon" />
