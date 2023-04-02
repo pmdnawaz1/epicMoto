@@ -152,7 +152,8 @@ h2 {
 /* Responsive styles */
 
 .right-section {
-  flex: 1 0 288px;
+  flex: 1 0 108px;
+  height: 415px;
   box-sizing: border-box;
   margin-right: 10px;
 }
@@ -537,6 +538,10 @@ td {
   overflow: hidden;
 }
 
+.container2{
+  gap: 20rem;
+}
+
 .left-section p {
   line-height: normal;
   color: rgb(128, 128, 128);
@@ -592,22 +597,61 @@ td {
   margin-bottom: 2rem;
 }
 
+#tandc{
+  margin-left: 5rem;
+  margin-right: 12rem;
+}
+.text-container > h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.para-light{
+  font-size: 15px;
+  color: #6c6c6c;
+  font-weight: 100;
+}
+
+#tours{
+  margin: 4rem;
+}
+
 @media (min-width: 1200px){
   .container {
       max-width: 1374px;
   }
 }
 
+@media (max-width : 1200px){
+   .container2{
+    gap: 1rem;
+  }
+} 
 
 @media (max-width: 971px) {
   .left-section > h1, .left-section > h1 > span {
     font-size: 30px;
     margin-top: 0;
   }
+  #tandc{
+    margin: 0 3rem;
+  }
+  .container2{
+    gap: 8rem;
+  }
+  .right-section {
+    flex: 1 0 240px;
+  }
 }
 
 @media (max-width : 389px) {
   .middle-black-bar > h2{
     font-size: 20px;
+  }
+  #tandc{
+    margin: 0 1.5rem;
+  }
+  .right-section {
+    flex: 1 0 120px;
   }
 }
