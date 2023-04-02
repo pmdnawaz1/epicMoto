@@ -609,7 +609,7 @@ td {
 
 .para-light{
   font-size: 15px;
-  color: #6c6c6c;
+  color: #898989;
   font-weight: 100;
 }
 
@@ -654,5 +654,8 @@ td {
   }
   .right-section {
     flex: 1 0 120px;
+  }
+  .about-us{
+    margin-top: -12rem;
   }
 }
