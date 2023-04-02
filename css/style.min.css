@@ -68,12 +68,8 @@ body .slider-container.first-sample .next-slide {
   right: -70px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 940px) {
   body .slider-container.first-sample {
     display:none;
   }
 }
-
-
-
-

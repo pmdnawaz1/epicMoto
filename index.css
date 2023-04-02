@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-size: 16px;
-  line-height: 1.725;
+  line-height: 1.625;
   color: rgb(0, 0, 0);
   font-family: "Avenir LT Std", sans-serif;
 
@@ -542,13 +542,12 @@ td {
 }
 
 .left-section p {
-  line-height: 1.725;
+  line-height: normal;
   color: rgb(128, 128, 128);
 }
 .left-text{
   font-size: 15px !important;
   margin-bottom: 2rem;
-  line-height: 1.725;
 }
 
 .left-section > h1 {
@@ -590,7 +589,7 @@ td {
 
 .image-grid img {
   width: 100%;
-  height: 19rem;
+  height: 363px;
 }
 
 .space{
@@ -609,7 +608,7 @@ td {
 
 .para-light{
   font-size: 15px;
-  color: #6c6c6c;
+  color: #898989;
   font-weight: 100;
 }
 
@@ -654,5 +653,8 @@ td {
   }
   .right-section {
     flex: 1 0 120px;
+  }
+  .about-us{
+    margin-top: -12rem;
   }
 }

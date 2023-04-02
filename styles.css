@@ -1,0 +1,114 @@
+body {
+  
+  font-family: 'Source Sans Pro', arial, sans-serif;
+  font-weight: 300;
+}
+
+section{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body * {
+  box-sizing: border-box;
+}
+body > h2{
+  padding-left: 10rem;
+  border-bottom: 1px solid rgb(91, 91, 91);
+  border-top: 1px solid rgb(91, 91, 91);
+  padding-block: 24px;
+}
+
+.timeline {
+  width: 100vw;
+  box-sizing: border-box;
+  max-width: 80rem;
+  background: #fff;
+  padding: 100px 50px;
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: calc(33% + 15px);
+  bottom: 0px;
+  width: 1px;
+  background: rgb(114, 114, 114);
+}
+
+.timeline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.entry {
+  clear: both;
+  text-align: left;
+  position: relative;
+}
+
+.entry .title {
+  margin-bottom: .5em;
+  float: left;
+  width: 33%;
+  padding-right: 30px;
+  text-align: right;
+  position: relative;
+}
+
+.entry .title:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 100%;
+  top: 15%;
+  right: -3px;
+  z-index: 99;
+}
+
+.entry .title h3 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 1rem !important;
+  font-size: 120%;
+}
+
+.entry .title p {
+  margin: 0;
+  font-size: 100%;
+}
+
+.entry .body {
+  margin: 0 0 3em;
+  float: right;
+  width: 60%;
+  padding-left: 30px;
+}
+
+.entry .body p:first-child {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.entry .body p {
+  line-height: 1.4em;
+}
+
+.entry .body ul {
+  color: #aaa;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.entry .body ul li:before {
+  content: "–";
+  margin-right: .5em;
+}
