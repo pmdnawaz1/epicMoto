@@ -31,15 +31,14 @@ h2 {
 
 .page-header {
   background-color: white;
-  padding: 1.3rem;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.logo {
+.logo img {
   color: white;
   align-self: center;
   margin-left: 1.2rem;
-  font-size: 2.5rem;
 }
 
 .nav-bar {
@@ -51,7 +50,7 @@ h2 {
   padding: 1.5rem;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .nav-bar a:hover {
   color: #ff4040;
@@ -64,18 +63,18 @@ h2 {
 }
 
 .b1 {
-  background-color: hsl(0, 100%, 92%);
+  background-color: hsl(0, 92%, 90%);
   border-radius: 25px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 10px 20px;
   border: none;
-  color: #ff4040;
+  color: #f90404;
 }
 .b2 {
   background-color: #fff;
   border-radius: 25px;
-  font-size: 1.3rem;
-  padding: 10px 20px;
+  font-size: 1rem;
+  padding: 10px 2.5rem;
   color: rgb(255, 255, 255);
   background-color: black;
   border: none;
@@ -147,7 +146,6 @@ h2 {
 
 /* max-width */
 
-
 /* Responsive styles */
 
 .right-section {
@@ -187,12 +185,6 @@ h2 {
   cursor: pointer;
   border-radius: 25px;
   border: none;
-}
-
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
 }
 
 .middle-black-bar {
@@ -238,7 +230,6 @@ h2 {
     margin-top: 5px;
     margin-left: 3px;
   }
-  
 }
 
 .carousel-item {
@@ -248,7 +239,7 @@ h2 {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .carousel-caption {
@@ -267,7 +258,7 @@ h2 {
 
 @media (max-width: 768px) {
   .carousel-item {
-    height: 200px;
+    height: 400px;
   }
 }
 
@@ -532,20 +523,20 @@ td {
   align-items: center;
 }
 
-.container1{
+.container1 {
   height: 82vh;
   overflow: hidden;
 }
 
-.container2{
-  gap: 20rem;
+.container2 {
+  gap: 2rem;
 }
 
 .left-section p {
-  line-height: normal;
+  line-height: 1.725;
   color: rgb(128, 128, 128);
 }
-.left-text{
+.left-text {
   font-size: 15px !important;
   margin-bottom: 2rem;
 }
@@ -556,7 +547,7 @@ td {
   margin-top: -12rem;
 }
 
-.left-section > h1 > span{
+.left-section > h1 > span {
   color: #ff4040;
   text-decoration: underline;
   font-weight: bold;
@@ -589,54 +580,54 @@ td {
 
 .image-grid img {
   width: 100%;
-  height: 363px;
+  height: 17.5rem;
 }
 
-.space{
+.space {
   margin-bottom: 2rem;
-  
 }
 
-#tandc{
+#tandc {
   margin-left: 5rem;
   margin-right: 12rem;
 }
-.text-container > h2{
+.text-container > h2 {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.para-light{
+.para-light {
   font-size: 15px;
-  color: #898989;
+  color: #1a1a1a;
   font-weight: 100;
 }
 
-#tours{
+/* #tours{
   margin: 4rem;
-}
+} */
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
   .container {
-      max-width: 1374px;
+    max-width: 1374px;
   }
 }
 
-@media (max-width : 1200px){
-   .container2{
+@media (max-width: 1200px) {
+  .container2 {
     gap: 1rem;
   }
-} 
+}
 
 @media (max-width: 971px) {
-  .left-section > h1, .left-section > h1 > span {
+  .left-section > h1,
+  .left-section > h1 > span {
     font-size: 30px;
     margin-top: 0;
   }
-  #tandc{
+  #tandc {
     margin: 0 3rem;
   }
-  .container2{
+  .container2 {
     gap: 8rem;
   }
   .right-section {
@@ -644,17 +635,51 @@ td {
   }
 }
 
-@media (max-width : 389px) {
-  .middle-black-bar > h2{
+@media (max-width: 389px) {
+  .middle-black-bar > h2 {
     font-size: 20px;
   }
-  #tandc{
+  #tandc {
     margin: 0 1.5rem;
   }
   .right-section {
     flex: 1 0 120px;
   }
-  .about-us{
+  .about-us {
     margin-top: -12rem;
   }
+  
 }
+
+/* Tours boxes */
+.box-container {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.box1,
+.box2,
+.box3 {
+  background-color: black;
+  border: #fff;
+}
+.box1 p,
+.box3 p,
+.box2 p {
+  color: #fff;
+  padding: 5px;
+}
+.box1 h3,
+.box3 h3,
+.box2 h3 {
+  padding: 5px;
+}
+
+/* @media (max-width : 389px){  
+  .box-container{
+    display: block;
+  }
+  
+} */
