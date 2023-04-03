@@ -584,6 +584,12 @@ td {
   height: 19.5rem;
 }
 
+/* @media screen and (max-width: 400px){
+.right-section1 .image-grid{
+  width: 100%;
+  height: 1.5rem;
+}
+} */
 .space {
   margin-bottom: 2rem;
 }
@@ -598,7 +604,7 @@ td {
 }
 
 .para-light {
-  font-size: 15px;
+  font-size: 16px;
   color: #1a1a1a;
   font-weight: 100;
 }
@@ -654,58 +660,52 @@ td {
 /* Tours boxes */
 .box-container {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+  padding: 0.5rem;
 }
-.box1,
-.box2,
-.box3 {
+.box {
   background-color: black;
-  border: #fff;
 }
-.box1 p,
-.box3 p,
-.box2 p {
-  color: #fff;
+.box p {
+  color: #ffffff;
   padding: 5px;
 }
-.box1 h3,
-.box3 h3,
-.box2 h3 {
+.box h3 {
   padding: 5px;
 }
 
-/* @media (max-width : 389px){  
+ /* @media (max-width : 400px){  
   .box-container{
-    display: block;
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
   }
   
-} */
-
+}  */
 
 /* footer */
-.fa {  
-  padding: 20px;  
-text-align: center;  
-  margin: 5px 2px;  
-  font-size: 25px;  
-  width: 50px;  
-}  
-.fa-facebook {    
-  color: rgb(0, 0, 0);  
-}  
-.fa-twitter {    
-  color: rgb(0, 0, 0);  
-}  
- 
-.fa-linkedin {  
-  color: rgb(0, 0, 0);  
-}  
-.fa-instagram {  
-  color: rgb(0, 0, 0);  
-}  
-.fa-youtube {  
-  color: rgb(0, 0, 0);  
-}  
+.fa {
+  padding: 20px;
+  text-align: center;
+  margin: 5px 2px;
+  font-size: 25px;
+  width: 50px;
+}
+.fa-facebook {
+  color: rgb(0, 0, 0);
+}
+.fa-twitter {
+  color: rgb(0, 0, 0);
+}
+
+.fa-linkedin {
+  color: rgb(0, 0, 0);
+}
+.fa-instagram {
+  color: rgb(0, 0, 0);
+}
+.fa-youtube {
+  color: rgb(0, 0, 0);
+}
