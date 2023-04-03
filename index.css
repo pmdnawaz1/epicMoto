@@ -693,6 +693,12 @@ td {
   justify-content: space-around;
   padding-top: 2rem;
 }
+.tours-bottom ul{
+  color: white;
+}
+.tours-bottom ul li{
+  color: #ffffff;
+}
 .line{
   border-left: 1px solid #fff;
 }
@@ -710,12 +716,16 @@ td {
   padding: 5rem;
 
 }
+.or a{
+  color:black;
+}
 
 .im{
   width: 50%;
 }
 .im img{
-  height: 60vh;
+  height: 100%;
+  object-fit: contain;
 } 
 
 /* footer */
