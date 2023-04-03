@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
+  line-height: 1.725;
   font-size: 16px;
-  line-height: 1.625;
-  color: rgb(0, 0, 0);
+  color: #1a1a1a;
+  font-weight: 100;
   font-family: "Avenir LT Std", sans-serif;
 
   margin: 0;
@@ -496,14 +497,14 @@ td {
 
 .whatsapp-icon {
   position: fixed;
-  bottom: 2.2em;
+  bottom: 3em;
   right: 2em;
   z-index: 9999;
 }
 
 .whatsapp-icon img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
@@ -580,7 +581,7 @@ td {
 
 .image-grid img {
   width: 100%;
-  height: 17.5rem;
+  height: 19.5rem;
 }
 
 .space {
@@ -636,9 +637,9 @@ td {
 }
 
 @media (max-width: 389px) {
-  .middle-black-bar > h2 {
+  /* .middle-black-bar > h2 {
     font-size: 20px;
-  }
+  } */
   #tandc {
     margin: 0 1.5rem;
   }
@@ -648,7 +649,6 @@ td {
   .about-us {
     margin-top: -12rem;
   }
-  
 }
 
 /* Tours boxes */
@@ -683,3 +683,29 @@ td {
   }
   
 } */
+
+
+/* footer */
+.fa {  
+  padding: 20px;  
+text-align: center;  
+  margin: 5px 2px;  
+  font-size: 25px;  
+  width: 50px;  
+}  
+.fa-facebook {    
+  color: rgb(0, 0, 0);  
+}  
+.fa-twitter {    
+  color: rgb(0, 0, 0);  
+}  
+ 
+.fa-linkedin {  
+  color: rgb(0, 0, 0);  
+}  
+.fa-instagram {  
+  color: rgb(0, 0, 0);  
+}  
+.fa-youtube {  
+  color: rgb(0, 0, 0);  
+}  
