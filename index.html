@@ -1,240 +1,319 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/avenir-lt-std"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-5iSb6Dz0Mw4zV4GndC4vrXj7fy4AbLrHhejPFDzNoF018WgZiFvCcNkYWr25/Pj9"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-5iSb6Dz0Mw4zV4GndC4vrXj7fy4AbLrHhejPFDzNoF018WgZiFvCcNkYWr25/Pj9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/blue-slider.min.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script
+      type="text/javascript"
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    ></script>
+  </head>
 
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="css/blue-slider.min.css" />
-  <link rel="stylesheet" href="css/fontello.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
-  <link rel="stylesheet" href="css/new.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
+  <body onload="initMap()">
+    <!-- Navigation bar with links -->
+    <div class="page-header">
+      <div class="logo">
+        <img src="/logo/logo.webp" />
+      </div>
+      <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+        <i class="fa fa-bars"></i>
+      </a>
 
-<body onload="initMap()">
-  <!-- Navigation bar with links -->
-  <div class="page-header">
-    <div class="logo">
-      <img src="/logo/logo.webp" />
+      <div id="navigation-bar" class="nav-bar">
+        <a
+          id="home-link"
+          href="#home"
+          class="active"
+          onclick="showPage('home');hideNavBar()"
+          >Home</a
+        >
+        <a
+          id="tours-link"
+          href="#tours"
+          onclick="showPage('tours');hideNavBar()"
+          >Tours</a
+        >
+        <a
+          id="bike-rental-link"
+          href="#bike-rental"
+          onclick="showPage('bike-rental');hideNavBar()"
+          >Bike Rentals</a
+        >
+        <a
+          id="tandc-link"
+          href="#tandc"
+          onclick="showPage('tandc');hideNavBar()"
+          >Terms and conditions</a
+        >
+        <a
+          id="contact-link"
+          href="#contact"
+          onclick="showPage('contact');hideNavBar()"
+          >Contact us</a
+        >
+        <button class="b1">8894777300|info@epicmototours.com</button>
+        <button class="b2">Contact</button>
+      </div>
     </div>
-    <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <script>
+      function onMenuClick() {
+        var navbar = document.getElementById("navigation-bar");
+        var content = document.getElementById("content");
+        var responsive_class_name = "responsive";
 
-    <div id="navigation-bar" class="nav-bar">
-      <a id="home-link" href="#home" class="active" onclick="showPage('home');hideNavBar()">Home</a>
-      <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()">Tours</a>
-      <a id="bike-rental-link" href="#bike-rental" onclick="showPage('bike-rental');hideNavBar()">Bike Rentals</a>
-      <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()">Terms and conditions</a>
-      <a id="contact-link" href="#contact" onclick="showPage('contact');hideNavBar()">Contact us</a>
-      <button class="b1">8894777300|info@epicmototours.com</button>
-      <button class="b2">Contact</button>
-    </div>
-  </div>
-  <script>
-    function onMenuClick() {
-      var navbar = document.getElementById("navigation-bar");
-      var content = document.getElementById("content");
-      var responsive_class_name = "responsive";
+        navbar.classList.toggle(responsive_class_name);
+        content.style.display = "block";
+      }
 
-      navbar.classList.toggle(responsive_class_name);
-      content.style.display = "block";
-    }
+      function hideNavBar() {
+        var navbar = document.getElementById("navigation-bar");
+        var content = document.getElementById("content");
+        var responsive_class_name = "responsive";
 
-    function hideNavBar() {
-      var navbar = document.getElementById("navigation-bar");
-      var content = document.getElementById("content");
-      var responsive_class_name = "responsive";
+        navbar.classList.remove(responsive_class_name);
+        content.style.display = "none";
+      }
+    </script>
 
-      navbar.classList.remove(responsive_class_name);
-      content.style.display = "none";
-    }
-  </script>
-
-  <div class="content-wrapper">
-    <!-- Main content -->
-    <div id="home" class="content active">
-      <div class="container container1">
-        <div class="left-section">
-          <h1>
-            Begin your expedition into the extraordinary with<span>Epicmototours</span>
-          </h1>
-          <p>
-            Aside from hosting you as a tourist, our biker community is
-            dedicated<br />
-            to assisting you in leading extraordinary lives, creating
-            unforgettable<br />
-            memories, and living life to the fullest. Because only extreme
-            bile travel<br />
-            fantasies inspire epic stories. Stories that are worth listening
-            to & sharing.
-          </p>
-          <button>Contact Us</button>
-          <button style="
+    <div class="content-wrapper">
+      <!-- Main content -->
+      <div id="home" class="content active">
+        <div class="container container1">
+          <div class="left-section">
+            <h1>
+              Begin your expedition into the extraordinary with<span
+                >Epicmototours</span
+              >
+            </h1>
+            <p class="para-light">
+              Aside from hosting you as a tourist, our biker community is
+              dedicated<br />
+              to assisting you in leading extraordinary lives, creating
+              unforgettable<br />
+              memories, and living life to the fullest. Because only extreme
+              bile travel<br />
+              fantasies inspire epic stories. Stories that are worth listening
+              to & sharing.
+            </p>
+            <button>Contact Us</button>
+            <button
+              style="
                 background-color: #fff;
                 color: #000;
                 border: 1px solid black;
-              ">
-            Learn More
-          </button>
-        </div>
-        <div class="right-section1">
-          <div class="image-grid">
-            <img src="/Images/New folder/IMG_20230331_021739.jpg" />
-            <img src="/Images/New folder/IMG_20230331_021759.jpg" />
-            <img src="/Images/New folder/IMG_20230331_021817.jpg" />
-            <img src="/Images/New folder/IMG_20230331_021834.jpg" />
-            <img src="/Images/New folder/IMG_20230331_021902.jpg" />
-            <img src="/Images/New folder/IMG_20230331_021919.jpg" />
+              "
+            >
+              Learn More
+            </button>
           </div>
-        </div>
-      </div>
-
-      <div class="middle-black-bar">
-        <h2>
-          Drop your gears and bike your way with Epicmototours
-        </h2>
-      </div>
-      <div class="container container2 space">
-        <div class="left-section">
-          <h2>Tours</h2>
-          <p class="">
-            Accept challenges, and embrace discomfort in the natural
-            wilderness to build resilience and confidence. Tours offer a
-            window into other cultures, an insider's perspective on the
-            location, the opportunity to meet new people, and the freedom to
-            see the world through one's own eyes. Discover the ideal
-            expedition with us to bring out the badass traveller in you. Get
-            ready to accept challenges and embrace discomfort in the natural
-            wilderness to build resilience and confidence.
-          </p>
-        </div>
-        <div class="box-container1">
-          <div class="box">
-            <img src="/Images/toursbox/WhatsApp-Image-2017-10-11-at-8_17_25-PM.webp" />
-
-            <a href="page.html">
-              <h3 style="color: white">
-                The Great Himalayan Motorcycle <br />Tour
-              </h3>
-            </a>
-            <p>Start dates: June 2, August 29 | 22 days</p>
-          </div>
-          <div class="box">
-            <img src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp" />
-            <a href="page2.html">
-              <h3 style="color: white">Spiti motorbike trip</h3>
-            </a>
-            <p>
-              Start dates: May 11, May 29, June 11, July 29,
-              <br />
-              August 11, August 29, September 11 | 17 Days
-            </p>
-          </div>
-          <div class="box">
-            <img src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp" />
-            <a href="page3.html">
-              <h3 style="color: white">Trans Himalaya Motorcycle Tour</h3>
-            </a>
-            <p>
-              Start dates: May 11, May 29, June 11, July 29,<br />
-              August 11, August 29, September 11 | 17 Days
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container container2 space">
-        <div class="left-section">
-          <h2>Bike rentals</h2>
-          <p>
-            Explore the beauty of Manali and beyond on two wheels. If you’re
-            looking for a unique way to explore Manali and its stunning
-            natural beauty, bike rentals are a perfect choice. Riding through
-            the lush greenery, winding roads and picturesque riverside views
-            is an incredible experience. One of the best places to rent a bike
-            in Manali is Epicmototours. Here you can choose from a variety of
-            mountain bikes that are perfect for tackling steep trails or
-            cruising around town. All of their bikes come with comfortable
-            saddles and adjustable handlebars, so you can customize your ride
-            to suit your needs.
-          </p>
-          <button>Contact</button>
-        </div>
-        <div class="right-section bike-main">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/Images/himalayan.jpg" alt="First slide" />
-              </div>
-              <div class="carousel-item">
-                <img src="/Images/hunter.jpg" alt="Second slide" />
-              </div>
-              <div class="carousel-item">
-                <img src="/Images/re500.jpg" alt="Third slide" />
-              </div>
+          <div class="right-section1">
+            <div class="image-grid">
+              <img src="/Images/New folder/IMG_20230331_021739.jpg" />
+              <img src="/Images/New folder/IMG_20230331_021759.jpg" />
+              <img src="/Images/New folder/IMG_20230331_021817.jpg" />
+              <img src="/Images/New folder/IMG_20230331_021834.jpg" />
+              <img src="/Images/New folder/IMG_20230331_021902.jpg" />
+              <img src="/Images/New folder/IMG_20230331_021919.jpg" />
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
         </div>
-      </div>
 
-      <div class="container container2 about-us space">
-        <div class="left-section">
-          <h2>About Us</h2>
-          <p>
-            Our passion for Motorcycles and adventure created this business
-            for making memories for every client and to give them an
-            experience of a lifetime. Their needs and considerations are being
-            placed at the forefront of our business before anything else. The
-            founder of this company Karan Thakur has brought together a team
-            of motorbike enthusiasts and mechanics having years of expertise
-            and knowledge. Having joint experience of more than 100 years we
-            are one of the most experienced companies providing motorbike
-            tours in the Himalayas. We offer guided and custom Motorcycle
-            tours on the legendary Royal Enfields. This machine is made for
-            perfect adventure travel. There's always a new route being
-            explored in the Himalayas by these bikes.
-          </p>
-          <button>Contact</button>
+        <div class="middle-black-bar">
+          <h2>Drop your gears and bike your way with Epicmototours</h2>
         </div>
-        <div class="right-section">
-          <img src="/Images/IMG_8342.jpg" />
-        </div>
-      </div>
+        <div class="container container2 space">
+          <div class="left-section">
+            <h2>Tours</h2>
+            <p class="">
+              Accept challenges, and embrace discomfort in the natural
+              wilderness to build resilience and confidence. Tours offer a
+              window into other cultures, an insider's perspective on the
+              location, the opportunity to meet new people, and the freedom to
+              see the world through one's own eyes. Discover the ideal
+              expedition with us to bring out the badass traveller in you. Get
+              ready to accept challenges and embrace discomfort in the natural
+              wilderness to build resilience and confidence.
+            </p>
+          </div>
+          <div class="box-container1">
+            <div class="box">
+              <img
+                src="/Images/toursbox/WhatsApp-Image-2017-10-11-at-8_17_25-PM.webp"
+              />
 
-      <!-- Image gallery -->
-      <!-- <div class="slider-container first-sample">
+              <a href="page.html">
+                <h3 style="color: white">
+                  The Great Himalayan Motorcycle <br />Tour
+                </h3>
+              </a>
+              <p class="para-light">Start dates: June 2, August 29 | 22 days</p>
+            </div>
+            <div class="box">
+              <img
+                src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp"
+              />
+              <a href="page2.html">
+                <h3 style="color: white">Spiti motorbike trip</h3>
+              </a>
+              <p class="para-light">
+                Start dates: May 11, May 29, June 11, July 29,
+                <br />
+                August 11, August 29, September 11 | 17 Days
+              </p>
+            </div>
+            <div class="box">
+              <img
+                src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp"
+              />
+              <a href="page3.html">
+                <h3 style="color: white">Trans Himalaya Motorcycle Tour</h3>
+              </a>
+              <p class="para-light">
+                Start dates: May 11, May 29, June 11, July 29,<br />
+                August 11, August 29, September 11 | 17 Days
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container container2 space">
+          <div class="left-section">
+            <h2>Bike rentals</h2>
+            <p class="para-light">
+              Explore the beauty of Manali and beyond on two wheels. If you’re
+              looking for a unique way to explore Manali and its stunning
+              natural beauty, bike rentals are a perfect choice. Riding through
+              the lush greenery, winding roads and picturesque riverside views
+              is an incredible experience. One of the best places to rent a bike
+              in Manali is Epicmototours. Here you can choose from a variety of
+              mountain bikes that are perfect for tackling steep trails or
+              cruising around town. All of their bikes come with comfortable
+              saddles and adjustable handlebars, so you can customize your ride
+              to suit your needs.
+            </p>
+            <button>Contact</button>
+          </div>
+          <div class="right-section bike-main">
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/Images/himalayan.jpg" alt="First slide" />
+                </div>
+                <div class="carousel-item">
+                  <img src="/Images/hunter.jpg" alt="Second slide" />
+                </div>
+                <div class="carousel-item">
+                  <img src="/Images/re500.jpg" alt="Third slide" />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <script
+              src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+              integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+              crossorigin="anonymous"
+            ></script>
+
+            <script
+              src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+              integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+              crossorigin="anonymous"
+            ></script>
+
+            <script
+              src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+              integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+              crossorigin="anonymous"
+            ></script>
+          </div>
+        </div>
+
+        <div class="container container2 about-us space">
+          <div class="left-section">
+            <h2>About Us</h2>
+            <p class="para-light">
+              Our passion for Motorcycles and adventure created this business
+              for making memories for every client and to give them an
+              experience of a lifetime. Their needs and considerations are being
+              placed at the forefront of our business before anything else. The
+              founder of this company Karan Thakur has brought together a team
+              of motorbike enthusiasts and mechanics having years of expertise
+              and knowledge. Having joint experience of more than 100 years we
+              are one of the most experienced companies providing motorbike
+              tours in the Himalayas. We offer guided and custom Motorcycle
+              tours on the legendary Royal Enfields. This machine is made for
+              perfect adventure travel. There's always a new route being
+              explored in the Himalayas by these bikes.
+            </p>
+            <button>Contact</button>
+          </div>
+          <div class="right-section">
+            <img src="/Images/IMG_8342.jpg" />
+          </div>
+        </div>
+
+        <!-- Image gallery -->
+        <!-- <div class="slider-container first-sample">
         <div class="slider space">
           <div class="item"><img src="images/pic1.jpg" alt="" /></div>
           <div class="item"><img src="images/pic2.jpg" alt="" /></div>
@@ -255,425 +334,441 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
           crossorigin="anonymous"></script>
-      </div> -->
+        </div> -->
 
-      <iframe src="page4.html" width="100%" height="860px" id="page4"></iframe>
-    </div>
-    <!--Terms and conditions-->
-    <div id="tandc" class="content">
-      <div class="text-container">
-        <h2>Terms & Conditions</h2>
-        <p class="para-light">
-          EPIC TOURS is an operator of all Moto Tours on our website. Epic
-          Tours is registered with the Department of Tourism and Civil
-          Aviation, Government of Himachal Pradesh, India.<br />
-        </p>
-        <p class="para-light">
-          In respect of these Booking Conditions, “We/ Epic Tours” and “You/
-          Participant(s)”- will be the person(s) whose name and details appear
-          on the online booking form.<br />
-        </p>
-        <p class="para-light">
-          The Terms and Conditions herein below form an integral part of the
-          tour contract entered into between the Participant and Epic Tours.
-          However, any express Terms and Conditions set out in specific Tour
-          Itineraries and Packages shall have precedence over the Terms and
-          Conditions herein below.<br />
-        </p>
-        <p class="para-light">
-          ​The use and access of this Website by the Participant shall bind
-          the Participant to the Terms and Conditions contained herein below,
-          whether or not they have been read. As Epic Tours may revise the
-          Terms and Conditions at any time, the Participants are requested to
-          visit this Website periodically and more particularly before
-          entering into a Tour Contract to review the updated Terms and
-          Conditions.
-        </p>
-        <h3>Site Contents</h3>
-        <p class="para-light">
-          All information and material, written or otherwise, including
-          photographs, images, video clips, marks, logos, designs that form
-          part of this Website shall be part of the intellectual property
-          rights of Epic Tours.<br />
-        </p>
-        <p class="para-light">
-          The Copyrights, Trademarks, Designs and other intellectual property
-          rights shall solely vest in and are owned by Epic Tours and are
-          subject to Control and License of Epic Tours.<br />
-        </p>
-        <p class="para-light">
-          Any information or contents contained or displayed on this website,
-          may not be downloaded or copied from this website. No right title or
-          interest shall vest to any person by way of downloading or
-          copying.<br />
-        </p>
-        <p class="para-light">
-          No person shall be entitled to reproduce, display, transmit,
-          publish, sell, assign or exploit, whether commercially or otherwise,
-          any information or contents, either wholly or in parts, contained or
-          displayed on this Website<br />
-        </p>
-        <h3>Copyrights</h3>
-        <p class="para-light">
-          All information and material, written or otherwise, including
-          photographs, images, video clips, marks, logos, designs that form
-          part of this Website shall be part of the intellectual property
-          rights of Epic Tours. The Copyrights, Trademarks, Designs and other
-          intellectual property rights shall solely vest in and are owned by
-          Epic Tours and are subject to Control and License of Epic Tours. Any
-          information or contents contained or displayed on this website, may
-          not be downloaded or copied from this website. No right title or
-          interest shall vest to any person by way of downloading or copying.
-          No person shall be entitled to reproduce, display, transmit,
-          publish, sell, assign or exploit, whether commercially or otherwise,
-          any information or contents, either wholly or in parts, contained or
-          displayed on this Website.
-        </p>
-        <h3>Conduct</h3>
-        <p class="para-light">
-          Epic Tours reserve the right, at their absolute discretion, to
-          terminate any Participant’s tour arrangements, without any notice,
-          should the Participant’s behavior be such that in Epic Tours
-          opinion, it is likely to cause distress, damage, annoyance or danger
-          to any other Participant /person; or, in case the Participant is
-          physically incapable of completing the Tour or in case Epic Tours
-          have concerns about the Participant’s medical condition. In such
-          circumstances, Epic Tours shall not be liable to refund any amount
-          or pay any compensation to the Participant. .<br />
-        </p>
-        <p class="para-light">
-          You agree to abide by the authority of the leader. Signing the
-          booking form implies your acceptance of the tour leader’s decisions
-          which could affect the group or individuals. The tour leader will
-          give you a complete briefing at your arrival about your journey with
-          Epic Tours. The guide or group leader designated by the agency
-          reserves the right to expel at any time a group of person or an
-          individual whose conduct may be regarded as affecting or endangering
-          the safety or well- being of the group. No compensation or refund
-          will be due to such individuals.
-          <br />
-        </p>
-        <p class="para-light">
-          Epic Tours endeavors to supply you the best possible service on your
-          journey, ensuring you have a great time. However, if you have a
-          complaint during your expedition, please notify your expedition
-          leader immediately in order to rectify the situation. If your
-          complaint was unresolved, then a written letter should be sent
-          within 30 days from the expedition completion date to: Epic Tours,
-          Hillco Building, Vill. Shuru, P.O. Prini, Manali, Distt. Kullu, H.P.
-          17<br />
-        </p>
-
-        <h3>Obligations</h3>
-        <ul class="obligations" style="margin-left: 2rem">
-          <li>
-            <p class="para-light">
-              It is a fundamental condition that you acknowledge that this is
-              an adventure tour. This requires some flexibility. The day to
-              day itinerary is taken as a guideline only. We cannot be held
-              responsible for any delays caused by Strikes, Government
-              regulations, International or domestic flights, weather or
-              natural casualties, force majeure. In such cases, Epic Tours
-              shall be responsible for suitable alternatives which could be
-              decided upon mutual agreement. If an agreement cannot be made,
-              Epic Tours shall be responsible for refund after deducting
-              expenses already incurred.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              You confirm that you are in proper physical and mental condition
-              before going on an expedition with Epic Tours. You confirm that
-              it is your own responsibility to determine the ability to
-              participate. You also confirm that you will notify us about any
-              medical condition or the use of prescribed medication that we
-              should know about. It is your duty to notify us beforehand and
-              is your responsibility to obtain medical advice as regards to
-              vaccinations required for the tour.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              It is our duty to ensure we deliver the trip you have booked
-              with us to the best of our ability and the it precedes in
-              accordance with the itinerary as stated on our website/ tailor
-              made to your requirement, thereafter making sure as reasonable
-              as possible your journey is unhindered en-route. Our itineraries
-              have been designed with consideration to the environments in
-              which we travel. Participants’ should therefore realize that
-              hygiene and safety standards in countries which you journey are
-              far different to the standards of your own. However, Epic Tours
-              takes care when booking locations, should offer the best of the
-              area, in which you stay and dine.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We are responsible for providing and arranging the services
-              listed in our tour itineraries and descriptions.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We are responsible for conscientious travel preparations, and we
-              review our accommodation providers, restaurants and contractors,
-              on a continuous basis.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We reserve the right to modify any part of a tour in the
-              interests of improvement or to adapt to other situations as they
-              arise.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We will not be held responsible or liable for expenses incurred
-              as a result of delays in flights or missed connections.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We will not be held responsible or liable for any delays or any
-              changes in the schedule in response to unplanned events.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We will not be held responsible or liable for any accidents
-              and/or bodily injury or death, resulting from the use of a
-              motorcycle, jeep. Riders and passengers<br />
-              indemnify all such claims against us, and our employees.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We are not responsible for any act of god, strikes, theft or
-              other conditions beyond our control.
-            </p>
-          </li>
-          <li>
-            <p class="para-light">
-              We are not responsible or liable for any property lost or
-              damaged while using a rented motorcycle and/or jeep.
-            </p>
-          </li>
-        </ul>
-        <h3>Booking, Cancellation & Refund</h3>
+        <iframe
+          src="page4.html"
+          width="100%"
+          height="860px"
+          id="page4"
+        ></iframe>
       </div>
-      <div class="container-table">
-        <table>
-          <tr>
-            <td>
-              <h4 style="color: #ff4040">Date of Cancellation</h4>
-            </td>
-            <td>
-              <h4 style="color: #ff4040">Charge Incurred</h4>
-            </td>
-          </tr>
-          <tr>
-            <td>More than 90 days before departure</td>
-            <td>0% of the total trip cost</td>
-          </tr>
-          <tr>
-            <td>90 days to 60 days before departure</td>
-            <td>25% of total trip cost</td>
-          </tr>
-          <tr>
-            <td>60 days to 30 days months before departure</td>
-            <td>50% of total trip cost</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-
-    <!--Contact-->
-    <script>
-      function initMap() {
-        var location = { lat: 37.7749, lng: -122.4194 };
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 12,
-          center: location,
-        });
-        var marker = new google.maps.Marker({
-          position: location,
-          map: map,
-        });
-      }
-    </script>
-    <div id="contact" class="content">
-      <div class="contact-container">
-        <div class="form-container">
-          <h2>Contact Us</h2>
-          <form action="submit-form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.098465187551!2d-6.266754784210263!3d53.3459427799812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e4f4e4afcb1%3A0x9e9e9547c0682ad0!2sTrinity%20College%20Dublin!5e0!3m2!1sen!2sie!4v1634141560186!5m2!1sen!2sie"
-            width="100%" height="100%" frameborder="0" style="border: 0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div id="bike-rental" class="content">
-      <div class="container-bike-rental">
-        <div class="section-br">
-          <h2>Get the best bike Rentals in Manali</h2>
+      <!--Terms and conditions-->
+      <div id="tandc" class="content">
+        <div class="text-container">
+          <h2>Terms & Conditions</h2>
           <p class="para-light">
-            You can now enjoy lush green views and breathtaking landscapes
-            with best-in-class yet affordable ride packages from Epicmototours
+            EPIC TOURS is an operator of all Moto Tours on our website. Epic
+            Tours is registered with the Department of Tourism and Civil
+            Aviation, Government of Himachal Pradesh, India.<br />
           </p>
-          <button>Contact</button>
-          <button>Learn More</button>
-        </div>
-        <h2>Our Bikes</h2>
-        <p class="para-light">
-          Gone are the days when one had to spend lots of hard-earned money on
-          adventurous bike trips.
-        </p>
-        <style>
-          .image-block img {
-            max-width: 100%;
-            height: auto;
-            max-height: 400px;
-            padding: 1em;
-          }
-
-          .image-block h4 {
-            text-align: center;
-            margin-top: 5px;
-          }
-        </style>
-
-        <div class="d-flex flex-wrap justify-content-center">
-          <div class="image-block">
-            <img src="/Images/himalayan.jpg" class="img-fluid" />
-            <h4>Himalayan 411cc</h4>
-          </div>
-          <div class="image-block">
-            <img src="/Images/hunter.jpg" class="img-fluid" />
-            <h4>Hunter 350cc</h4>
-          </div>
-          <div class="image-block">
-            <img src="/Images/re.jpg" class="img-fluid" />
-            <h4>Royal Enfield classic 350cc</h4>
-          </div>
-          <div class="image-block">
-            <img src="/Images/re500.jpg" class="img-fluid" />
-            <h4>Royal Enfield 500cc</h4>
-          </div>
-          <div class="image-block">
-            <img src="/Images/scram411.jpg" class="img-fluid" />
-            <h4>Scram 411cc</h4>
-          </div>
-          <div class="image-block">
-            <img src="/Images/Suziki.jpg" class="img-fluid" />
-            <h4>Suzuki Access 125cc</h4>
-          </div>
-        </div>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"></script>
-
-        <div style="margin-top: 20px; padding-left: 20px">
-          <h1>Exploring the Heartof Manali the Snow-Capped Treasure</h1>
           <p class="para-light">
-            Whether you're travelling alone to find inner peace, going on an
-            adventure backpacking trip with your besties, or taking your
-            significant other on a honeymoon, Manali and its mountains will
-            never cease to fascinate you. The hill town has developed into a
-            haven for those with a wandering spirit and contains some cultural
-            treasures that are exclusive to this region of the world. It is
-            located in the Kullu Valley of Himachal Pradesh in the northern
-            part of India. It's the perfect place to escape from the hustle
-            and bustle of city life as it is surrounded by the majestic
-            Himalayan Mountains, pristine rivers, and lustrous groves. It is
-            an ideal destination for tourists looking to explore the magical
-            landscape because Manali has something magical for everyone.
-            Whether you are looking for some adventure or just want to relax
-            and enjoy the scenery, Manali has it all. You can go sightseeing
-            around local attractions like Hadimba Temple and Vashisht Hot
-            Springs or explore the nearby Rohtang Pass and Solang Valley.
-            There are also many activities like river rafting, paragliding,
-            skiing, trekking, and camping that you can enjoy in Manali.
+            In respect of these Booking Conditions, “We/ Epic Tours” and “You/
+            Participant(s)”- will be the person(s) whose name and details appear
+            on the online booking form.<br />
           </p>
-          <h3 style="color: #ff4040">The Top 5 must-see places in Manali</h3>
+          <p class="para-light">
+            The Terms and Conditions herein below form an integral part of the
+            tour contract entered into between the Participant and Epic Tours.
+            However, any express Terms and Conditions set out in specific Tour
+            Itineraries and Packages shall have precedence over the Terms and
+            Conditions herein below.<br />
+          </p>
+          <p class="para-light">
+            ​The use and access of this Website by the Participant shall bind
+            the Participant to the Terms and Conditions contained herein below,
+            whether or not they have been read. As Epic Tours may revise the
+            Terms and Conditions at any time, the Participants are requested to
+            visit this Website periodically and more particularly before
+            entering into a Tour Contract to review the updated Terms and
+            Conditions.
+          </p>
+          <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Site Contents</h3>
+          <p class="para-light">
+            All information and material, written or otherwise, including
+            photographs, images, video clips, marks, logos, designs that form
+            part of this Website shall be part of the intellectual property
+            rights of Epic Tours.<br />
+          </p>
+          <p class="para-light">
+            The Copyrights, Trademarks, Designs and other intellectual property
+            rights shall solely vest in and are owned by Epic Tours and are
+            subject to Control and License of Epic Tours.<br />
+          </p>
+          <p class="para-light">
+            Any information or contents contained or displayed on this website,
+            may not be downloaded or copied from this website. No right title or
+            interest shall vest to any person by way of downloading or
+            copying.<br />
+          </p>
+          <p class="para-light">
+            No person shall be entitled to reproduce, display, transmit,
+            publish, sell, assign or exploit, whether commercially or otherwise,
+            any information or contents, either wholly or in parts, contained or
+            displayed on this Website<br />
+          </p>
+          <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Copyrights</h3>
+          <p class="para-light">
+            All information and material, written or otherwise, including
+            photographs, images, video clips, marks, logos, designs that form
+            part of this Website shall be part of the intellectual property
+            rights of Epic Tours. The Copyrights, Trademarks, Designs and other
+            intellectual property rights shall solely vest in and are owned by
+            Epic Tours and are subject to Control and License of Epic Tours. Any
+            information or contents contained or displayed on this website, may
+            not be downloaded or copied from this website. No right title or
+            interest shall vest to any person by way of downloading or copying.
+            No person shall be entitled to reproduce, display, transmit,
+            publish, sell, assign or exploit, whether commercially or otherwise,
+            any information or contents, either wholly or in parts, contained or
+            displayed on this Website.
+          </p>
+          <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Conduct</h3>
+          <p class="para-light">
+            Epic Tours reserve the right, at their absolute discretion, to
+            terminate any Participant’s tour arrangements, without any notice,
+            should the Participant’s behavior be such that in Epic Tours
+            opinion, it is likely to cause distress, damage, annoyance or danger
+            to any other Participant /person; or, in case the Participant is
+            physically incapable of completing the Tour or in case Epic Tours
+            have concerns about the Participant’s medical condition. In such
+            circumstances, Epic Tours shall not be liable to refund any amount
+            or pay any compensation to the Participant. .<br />
+          </p>
+          <p class="para-light">
+            You agree to abide by the authority of the leader. Signing the
+            booking form implies your acceptance of the tour leader’s decisions
+            which could affect the group or individuals. The tour leader will
+            give you a complete briefing at your arrival about your journey with
+            Epic Tours. The guide or group leader designated by the agency
+            reserves the right to expel at any time a group of person or an
+            individual whose conduct may be regarded as affecting or endangering
+            the safety or well- being of the group. No compensation or refund
+            will be due to such individuals.
+            <br />
+          </p>
+          <p class="para-light">
+            Epic Tours endeavors to supply you the best possible service on your
+            journey, ensuring you have a great time. However, if you have a
+            complaint during your expedition, please notify your expedition
+            leader immediately in order to rectify the situation. If your
+            complaint was unresolved, then a written letter should be sent
+            within 30 days from the expedition completion date to: Epic Tours,
+            Hillco Building, Vill. Shuru, P.O. Prini, Manali, Distt. Kullu, H.P.
+            17<br />
+          </p>
+
+          <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Obligations</h3>
+          <ul class="obligations" style="margin-left: 2rem">
+            <li>
+              <p class="para-light">
+                It is a fundamental condition that you acknowledge that this is
+                an adventure tour. This requires some flexibility. The day to
+                day itinerary is taken as a guideline only. We cannot be held
+                responsible for any delays caused by Strikes, Government
+                regulations, International or domestic flights, weather or
+                natural casualties, force majeure. In such cases, Epic Tours
+                shall be responsible for suitable alternatives which could be
+                decided upon mutual agreement. If an agreement cannot be made,
+                Epic Tours shall be responsible for refund after deducting
+                expenses already incurred.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                You confirm that you are in proper physical and mental condition
+                before going on an expedition with Epic Tours. You confirm that
+                it is your own responsibility to determine the ability to
+                participate. You also confirm that you will notify us about any
+                medical condition or the use of prescribed medication that we
+                should know about. It is your duty to notify us beforehand and
+                is your responsibility to obtain medical advice as regards to
+                vaccinations required for the tour.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                It is our duty to ensure we deliver the trip you have booked
+                with us to the best of our ability and the it precedes in
+                accordance with the itinerary as stated on our website/ tailor
+                made to your requirement, thereafter making sure as reasonable
+                as possible your journey is unhindered en-route. Our itineraries
+                have been designed with consideration to the environments in
+                which we travel. Participants’ should therefore realize that
+                hygiene and safety standards in countries which you journey are
+                far different to the standards of your own. However, Epic Tours
+                takes care when booking locations, should offer the best of the
+                area, in which you stay and dine.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We are responsible for providing and arranging the services
+                listed in our tour itineraries and descriptions.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We are responsible for conscientious travel preparations, and we
+                review our accommodation providers, restaurants and contractors,
+                on a continuous basis.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We reserve the right to modify any part of a tour in the
+                interests of improvement or to adapt to other situations as they
+                arise.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We will not be held responsible or liable for expenses incurred
+                as a result of delays in flights or missed connections.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We will not be held responsible or liable for any delays or any
+                changes in the schedule in response to unplanned events.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We will not be held responsible or liable for any accidents
+                and/or bodily injury or death, resulting from the use of a
+                motorcycle, jeep. Riders and passengers<br />
+                indemnify all such claims against us, and our employees.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We are not responsible for any act of god, strikes, theft or
+                other conditions beyond our control.
+              </p>
+            </li>
+            <li>
+              <p class="para-light">
+                We are not responsible or liable for any property lost or
+                damaged while using a rented motorcycle and/or jeep.
+              </p>
+            </li>
+          </ul>
+          <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Booking, Cancellation & Refund</h3>
         </div>
-        <div class="image-section2 row">
-          <div class="image-block img-block col-sm-6">
-            <img src="/Images/mallroad.jpg" />
+        <div class="container-table">
+          <table>
+            <tr>
+              <td>
+                <h4 style="color: #ff4040">Date of Cancellation</h4>
+              </td>
+              <td>
+                <h4 style="color: #ff4040">Charge Incurred</h4>
+              </td>
+            </tr>
+            <tr>
+              <td>More than 90 days before departure</td>
+              <td>0% of the total trip cost</td>
+            </tr>
+            <tr>
+              <td>90 days to 60 days before departure</td>
+              <td>25% of total trip cost</td>
+            </tr>
+            <tr>
+              <td>60 days to 30 days months before departure</td>
+              <td>50% of total trip cost</td>
+            </tr>
+          </table>
+        </div>
+      </div>
 
-            <h3>The Mall Road</h3>
-            <p class="para-light">
-              The Mall Road is one of the most popular spots in Manali. It has
-              numerous shops selling traditional items like shawls,
-              handicrafts, and jewellery as well as modern apparel,
-              accessories, and souvenirs.
-            </p>
+      <!--Contact-->
+      <script>
+        function initMap() {
+          var location = { lat: 37.7749, lng: -122.4194 };
+          var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 12,
+            center: location,
+          });
+          var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+          });
+        }
+      </script>
+      <div id="contact" class="content">
+        <div class="contact-container">
+          <div class="form-container">
+            <h2>Contact Us</h2>
+            <form action="submit-form.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+              <button type="submit">Send</button>
+            </form>
           </div>
-          <div class="image-block img-block col-sm-6">
-            <img src="/Images/hadimba.jpg" />
-
-            <h3>Hadimba Temple</h3>
-            <p class="para-light">
-              This ancient temple was built in 1553 A.D., dedicated to Hadimba
-              Devi – wife of Bhima from the Mahabharata epic. It is situated
-              in the middle of a dense forest and surrounded by tall deodar
-              trees making it an ideal spot for peace and tranquillity seekers
-              alike.
-            </p>
-          </div>
-          <div class="image-block img-block col-sm-6">
-            <img src="/Images/nyingmapa.jpg" />
-
-            <h3>Nyingmapa Buddhist Temple</h3>
-            <p class="para-light">
-              This ancient temple was built in 1553 A.D., dedicated to Hadimba
-              Devi – wife of Bhima from the Mahabharata epic. It is situated
-              in the middle of a dense forest and surrounded by tall deodar
-              trees making it an ideal spot for peace and tranquillity seekers
-              alike.
-            </p>
-          </div>
-          <div class="image-block img-block col-sm-6">
-            <img src="/Images/solang.jpg" />
-
-            <h3>Solang Valley</h3>
-            <p class="para-light">
-              Also known as Snow Point, Solang Valley offers some of the best
-              skiing experiences in India with its slopes covered with snow
-              from December to February. The valley also has several adventure
-              sports such as paragliding, zorbing, horse riding, and more!
-            </p>
-          </div>
-          <div class="image-block img-block col-sm-6">
-            <img src="/Images/hampta.jpg" />
-
-            <h3>Hampta Pass</h3>
-            <p class="para-light">
-              The Hampta Pass trek,labeledd as an easy-to-medium-difficulty
-              Himalayan trek, provides breathtaking views of the Kullu Valley
-              and Lahaul Valley. Another major draw of the trek is Chandratal
-              Lake, which is located en route. The pass is located at an
-              elevation of over 4000 metres in the Pir Panjal Range, and the
-              route includes incredibly fascinating river crossings.
-            </p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.098465187551!2d-6.266754784210263!3d53.3459427799812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e4f4e4afcb1%3A0x9e9e9547c0682ad0!2sTrinity%20College%20Dublin!5e0!3m2!1sen!2sie!4v1634141560186!5m2!1sen!2sie"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
-    </div>
-    <div id="tours" class="content">
-      <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+      <div id="bike-rental" class="content">
+        <div class="container-bike-rental">
+          <div class="section-br">
+            <h1>Get the best bike Rentals in Manali</h1>
+            <p class="para-light">
+              You can now enjoy lush green views and breathtaking landscapes
+              with best-in-class yet affordable ride packages from Epicmototours
+            </p>
+            <button class="b4">Contact</button>
+            <button class="b3">Learn More</button>
+          </div>
+          <div class="section-brr">
+            <h2>Our Bikes</h2>
+            <p class="para-light">
+              Gone are the days when one had to spend lots of hard-earned money
+              on adventurous bike trips.
+            </p>
+          </div>
+          <style>
+            .image-block img {
+              max-width: 100%;
+              height: auto;
+              max-height: 400px;
+              padding: 1em;
+            }
+
+            .image-block h4 {
+              text-align: center;
+              margin-top: 5px;
+            }
+          </style>
+
+          <div class="d-flex flex-wrap justify-content-center">
+            <div class="image-block">
+              <img src="/Images/himalayan.jpg" class="img-fluid" />
+              <h4>Himalayan 411cc</h4>
+            </div>
+            <div class="image-block">
+              <img src="/Images/hunter.jpg" class="img-fluid" />
+              <h4>Hunter 350cc</h4>
+            </div>
+            <div class="image-block">
+              <img src="/Images/re.jpg" class="img-fluid" />
+              <h4>Royal Enfield classic 350cc</h4>
+            </div>
+            <div class="image-block">
+              <img src="/Images/re500.jpg" class="img-fluid" />
+              <h4>Royal Enfield 500cc</h4>
+            </div>
+            <div class="image-block">
+              <img src="/Images/scram411.jpg" class="img-fluid" />
+              <h4>Scram 411cc</h4>
+            </div>
+            <div class="image-block">
+              <img src="/Images/Suziki.jpg" class="img-fluid" />
+              <h4>Suzuki Access 125cc</h4>
+            </div>
+          </div>
+
+          <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+          ></script>
+
+          <div style="margin-top: 20px; padding-left: 20px">
+            <h1 style="font-family: Raleway, sans-serif;font-weight: bold;">
+              Exploring the Heart of Manali the Snow-Capped Treasure
+            </h1>
+            <p class="para-light">
+              Whether you're travelling alone to find inner peace, going on an
+              adventure backpacking trip with your besties, or taking your
+              significant other on a honeymoon, Manali and its mountains will
+              never cease to fascinate you. The hill town has developed into a
+              haven for those with a wandering spirit and contains some cultural
+              treasures that are exclusive to this region of the world. It is
+              located in the Kullu Valley of Himachal Pradesh in the northern
+              part of India. It's the perfect place to escape from the hustle
+              and bustle of city life as it is surrounded by the majestic
+              Himalayan Mountains, pristine rivers, and lustrous groves. It is
+              an ideal destination for tourists looking to explore the magical
+              landscape because Manali has something magical for everyone.
+              Whether you are looking for some adventure or just want to relax
+              and enjoy the scenery, Manali has it all. You can go sightseeing
+              around local attractions like Hadimba Temple and Vashisht Hot
+              Springs or explore the nearby Rohtang Pass and Solang Valley.
+              There are also many activities like river rafting, paragliding,
+              skiing, trekking, and camping that you can enjoy in Manali.
+            </p>
+            <h3 style="color: #ff4040; font-family: Raleway, sans-serif;font-weight: bold;">The Top 5 must-see places in Manali</h3>
+          </div>
+          <div class="image-section2 row">
+            <div class="image-block img-block col-sm-6">
+              <img src="/Images/mallroad.jpg" />
+
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">The Mall Road</h3>
+              <p class="para-light">
+                The Mall Road is one of the most popular spots in Manali. It has
+                numerous shops selling traditional items like shawls,
+                handicrafts, and jewellery as well as modern apparel,
+                accessories, and souvenirs.
+              </p>
+            </div>
+            <div class="image-block img-block col-sm-6">
+              <img src="/Images/hadimba.jpg" />
+
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Hadimba Temple</h3>
+              <p class="para-light">
+                This ancient temple was built in 1553 A.D., dedicated to Hadimba
+                Devi – wife of Bhima from the Mahabharata epic. It is situated
+                in the middle of a dense forest and surrounded by tall deodar
+                trees making it an ideal spot for peace and tranquillity seekers
+                alike.
+              </p>
+            </div>
+            <div class="image-block img-block col-sm-6">
+              <img src="/Images/nyingmapa.jpg" />
+
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Nyingmapa Buddhist Temple</h3>
+              <p class="para-light">
+                This ancient temple was built in 1553 A.D., dedicated to Hadimba
+                Devi – wife of Bhima from the Mahabharata epic. It is situated
+                in the middle of a dense forest and surrounded by tall deodar
+                trees making it an ideal spot for peace and tranquillity seekers
+                alike.
+              </p>
+            </div>
+            <div class="image-block img-block col-sm-6">
+              <img src="/Images/solang.jpg" />
+
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Solang Valley</h3>
+              <p class="para-light">
+                Also known as Snow Point, Solang Valley offers some of the best
+                skiing experiences in India with its slopes covered with snow
+                from December to February. The valley also has several adventure
+                sports such as paragliding, zorbing, horse riding, and more!
+              </p>
+            </div>
+            <div class="image-block img-block col-sm-6">
+              <img src="/Images/hampta.jpg" />
+
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Hampta Pass</h3>
+              <p class="para-light">
+                The Hampta Pass trek,labeledd as an easy-to-medium-difficulty
+                Himalayan trek, provides breathtaking views of the Kullu Valley
+                and Lahaul Valley. Another major draw of the trek is Chandratal
+                Lake, which is located en route. The pass is located at an
+                elevation of over 4000 metres in the Pir Panjal Range, and the
+                route includes incredibly fascinating river crossings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tours" class="content">
+        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -699,96 +794,125 @@
         </a> 
       </div> -->
 
-      <iframe src="boot.html" width="100%" height="700px" id="boot"></iframe>
-      <div class="text-container">
-        <h2>Tours</h2>
-        <p class="para-light">
-          Accept challenges, and embrace discomfort in the natural wilderness
-          to build resilience and confidence. Tours offer a window into other
-          cultures, an insider's perspective on the location, the opportunity
-          to meet new people, and the freedom to see the world through one's
-          own eyes. Discover the ideal expedition with us to bring out the
-          badass traveller in you. Get ready to accept challenges and embrace
-          discomfort in the natural wilderness to build resilience and
-          confidence
-        </p>
-      </div>
-      <div class="box-container">
-        <div class="box">
-          <img src="/Images/toursbox/WhatsApp-Image-2017-10-11-at-8_17_25-PM.webp" />
+        <iframe src="boot.html" width="100%" height="400px" id="boot"></iframe>
+        <div class="text-container">
+          <h2>Tours</h2>
+          <p class="para-light">
+            Accept challenges, and embrace discomfort in the natural wilderness
+            to build resilience and confidence. Tours offer a window into other
+            cultures, an insider's perspective on the location, the opportunity
+            to meet new people, and the freedom to see the world through one's
+            own eyes. Discover the ideal expedition with us to bring out the
+            badass traveller in you. Get ready to accept challenges and embrace
+            discomfort in the natural wilderness to build resilience and
+            confidence
+          </p>
+        </div>
+        <div class="box-container">
+          <div class="box">
+            <img
+              src="/Images/toursbox/WhatsApp-Image-2017-10-11-at-8_17_25-PM.webp"
+            />
 
-          <a href="page.html">
-            <h3>
-              The Great Himalayan Motorcycle <br />Tour
-            </h3>
-          </a>
-          <p>Start dates: June 2, August 29 | 22 days</p>
-        </div>
-        <div class="box">
-          <img src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp" />
-          <a href="page2.html">
-            <h3>Spiti motorbike trip</h3>
-          </a>
-          <p>
-            Start dates: May 11, May 29, June 11, July 29,
-            <br />
-            August 11, August 29, September 11 | 17 Days
-          </p>
-        </div>
-        <div class="box">
-          <img src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp" />
-          <a href="page3.html">
-            <h3>Trans Himalaya Motorcycle Tour</h3>
-          </a>
-          <p>
-            Start dates: May 11, May 29, June 11, July 29,<br />
-            August 11, August 29, September 11 | 17 Days
-          </p>
+            <a href="page.html">
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">The Great Himalayan Motorcycle <br />Tour</h3>
+            </a>
+            <p class="para-light">Start dates: June 2, August 29 | 22 days</p>
+          </div>
+          <div class="box">
+            <img
+              src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp"
+            />
+            <a href="page2.html">
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Spiti motorbike trip</h3>
+            </a>
+            <p class="para-light">
+              Start dates: May 11, May 29, June 11, July 29,
+              <br />
+              August 11, August 29, September 11 | 17 Days
+            </p>
+          </div>
+          <div class="box">
+            <img
+              src="/Images/toursbox/cc0e91_d7b3b8c068df4099ad2ab5724577f12a_mv2.webp"
+            />
+            <a href="page3.html">
+              <h3 style="font-family: Raleway, sans-serif;font-weight: bold;">Trans Himalaya Motorcycle Tour</h3>
+            </a>
+            <p class="para-light">
+              Start dates: May 11, May 29, June 11, July 29,<br />
+              August 11, August 29, September 11 | 17 Days
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    function showPage(pageId) {
-      const pageContents = document.getElementsByClassName("content");
-      for (let i = 0; i < pageContents.length; i++) {
-        if (pageContents[i].id === pageId) {
-          pageContents[i].style.display = "block";
-        } else {
-          pageContents[i].style.display = "none";
+    <script>
+      function showPage(pageId) {
+        const pageContents = document.getElementsByClassName("content");
+        for (let i = 0; i < pageContents.length; i++) {
+          if (pageContents[i].id === pageId) {
+            pageContents[i].style.display = "block";
+          } else {
+            pageContents[i].style.display = "none";
+          }
         }
       }
-    }
-  </script>
-  <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-icon">
-    <img src="/logo/whatsapp.png" alt="WhatsApp Icon" />
-    <script>
-      document
-        .querySelector(".whatsapp-icon")
-        .addEventListener("click", function () {
-          window.open("https://wa.me/919133406362", "_blank");
-        });
     </script>
-  </a>
-  <div class="page-header">
-    <div class="logo">
-      <img src="/logo/logo.webp" />
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-icon">
+      <img src="/logo/whatsapp.png" alt="WhatsApp Icon" />
+      <script>
+        document
+          .querySelector(".whatsapp-icon")
+          .addEventListener("click", function () {
+            window.open("https://wa.me/919133406362", "_blank");
+          });
+      </script>
+    </a>
+    <div class="page-header">
+      <div class="logo">
+        <img src="/logo/logo.webp" />
+      </div>
+      <div id="navigation-bar" class="nav-bar">
+        <a
+          id="home-link"
+          href="#home"
+          class="active"
+          onclick="showPage('home');hideNavBar()"
+          >Home</a
+        >
+        <a
+          id="tours-link"
+          href="#tours"
+          onclick="showPage('tours');hideNavBar()"
+          >Tours</a
+        >
+        <a
+          id="bike-rental-link"
+          href="#bike-rental"
+          onclick="showPage('bike-rental');hideNavBar()"
+          >Bike Rentals</a
+        >
+        <a
+          id="tandc-link"
+          href="#tandc"
+          onclick="showPage('tandc');hideNavBar()"
+          >Terms and conditions</a
+        >
+        <a
+          id="contact-link"
+          href="#contact"
+          onclick="showPage('contact');hideNavBar()"
+          >Contact us</a
+        >
+      </div>
+      <div class="social-icons">
+        <a href="https://facebook.com/epicmototours" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/epicmototours" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </div>
     </div>
-    <div id="navigation-bar" class="nav-bar">
-      <a id="home-link" href="#home" class="active" onclick="showPage('home');hideNavBar()">Home</a>
-      <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()">Tours</a>
-      <a id="bike-rental-link" href="#bike-rental" onclick="showPage('bike-rental');hideNavBar()">Bike Rentals</a>
-      <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()">Terms and conditions</a>
-      <a id="contact-link" href="#contact" onclick="showPage('contact');hideNavBar()">Contact us</a>
-    </div>
-    <div class="social-icons">
-      <a href="https://facebook.com/epicmototours" class="fa fa-facebook"></a>
-      <a href="https://twitter.com/epicmototours" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-youtube"></a>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

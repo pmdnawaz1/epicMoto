@@ -4,15 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/avenir-lt-std"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="index.css" />
     <title>Trans Himalaya Motorcycle Tour</title>
   </head>
 
   <body>
+    <div id="navigation-bar" class="nav-bar">
+      <a
+        id="home-link"
+        href="#home"
+        class="active"
+        onclick="showPage('home');hideNavBar()"
+        >Home</a
+      >
+      <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()"
+        >Tours</a
+      >
+      <a
+        id="bike-rental-link"
+        href="#bike-rental"
+        onclick="showPage('bike-rental');hideNavBar()"
+        >Bike Rentals</a
+      >
+      <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()"
+        >Terms and conditions</a
+      >
+      <a
+        id="contact-link"
+        href="#contact"
+        onclick="showPage('contact');hideNavBar()"
+        >Contact us</a
+      >
+      <button class="b1">8894777300|info@epicmototours.com</button>
+      <button class="b2">Contact</button>
+      <script>
+        function onMenuClick() {
+          var navbar = document.getElementById("navigation-bar");
+          var content = document.getElementById("content");
+          var responsive_class_name = "responsive";
+  
+          navbar.classList.toggle(responsive_class_name);
+          content.style.display = "block";
+        }
+  
+        function hideNavBar() {
+          var navbar = document.getElementById("navigation-bar");
+          var content = document.getElementById("content");
+          var responsive_class_name = "responsive";
+  
+          navbar.classList.remove(responsive_class_name);
+          content.style.display = "none";
+        }
+        function showPage(pageId) {
+          const pageContents = document.getElementsByClassName("content");
+          for (let i = 0; i < pageContents.length; i++) {
+            if (pageContents[i].id === pageId) {
+              pageContents[i].style.display = "block";
+            } else {
+              pageContents[i].style.display = "none";
+            }
+          }
+        }
+      </script>
+    </div>
+   
     <div>
       <img src="/Images/toursbox/head1.webp" style="width: 100%" />
     </div>
