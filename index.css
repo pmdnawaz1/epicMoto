@@ -248,7 +248,8 @@ h3 {
     height: 75px;
   }
   .middle-black-bar h1 {
-    font-size: 20px;
+    font-size: 2rem;
+    font-weight: bold;
     text-align: center;
   }
   .container1 {
@@ -299,6 +300,10 @@ h3 {
 @media (max-width: 768px) {
   .carousel-item {
     height: 400px;
+  }
+  .middle-black-bar h2 {
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
@@ -411,6 +416,9 @@ h3 {
 @media (max-width: 400px) {
   .text-container {
     padding: 0em;
+  }
+  .middle-black-bar h2 {
+    font-size: 1rem;
   }
 }
 .text-container {
@@ -760,6 +768,7 @@ td {
 }
 .box-container1 {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin: 0 auto;
   padding: 0.5rem;
