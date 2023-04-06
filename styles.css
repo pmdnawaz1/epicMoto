@@ -84,6 +84,9 @@ body > h2 {
   text-align: right;
   position: relative;
 }
+.entry .title1{
+  display: none;
+}
 
 .entry .title:before {
   content: "";
@@ -149,5 +152,8 @@ body > h2 {
 @media screen and (max-width: 450px){
   .title{
     display: none;
+  }
+  .entry .title1{
+    display: block;
   }
 }
