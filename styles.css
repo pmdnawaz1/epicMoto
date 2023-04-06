@@ -20,8 +20,7 @@ h1 {
 h2 {
   font-size: 30px;
 }
-p{
-  
+p {
   font-size: 15px;
   color: #121111;
   font-weight: 100;
@@ -43,7 +42,6 @@ body > h2 {
   border-top: 1px solid rgb(91, 91, 91);
   padding-block: 24px;
 }
-
 
 .timeline {
   width: 100vw;
@@ -84,7 +82,7 @@ body > h2 {
   text-align: right;
   position: relative;
 }
-.entry .title1{
+.entry .title1 {
   display: none;
 }
 
@@ -149,12 +147,26 @@ body > h2 {
   padding: 2em;
   margin: 0 auto;
 }
+.top-br > h1 {
+  font-family: Raleway, sans-serif;
+  font-weight: 1000;
+  font-size: clamp(20px, 5vw, 54px);
+}
+.top-br > h3 {
+  font-family: Raleway, sans-serif;
+  font-size: clamp(20px, 5vw, 54px);
+  font-weight: 1000;
+}
+.top-br > p {
+  font-family: "Avenir LT Pro 200", sans-serif;
+  color: #212121;
+}
 
-@media screen and (max-width: 450px){
-  .title{
+@media screen and (max-width: 450px) {
+  .title {
     display: none;
   }
-  .entry .title1{
+  .entry .title1 {
     display: block;
   }
 }
