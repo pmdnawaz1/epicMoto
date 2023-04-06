@@ -55,7 +55,6 @@ h3 {
   cursor: pointer;
   text-decoration: none;
   font-size: 0.85rem;
-  
 }
 .nav-bar a:hover {
   color: #ff4040;
@@ -150,10 +149,10 @@ h3 {
   .logo {
     font-size: 1.4rem;
   }
-  .b1{
+  .b1 {
     display: none;
   }
-  .b2{
+  .b2 {
     display: none;
   }
 }
@@ -214,7 +213,7 @@ h3 {
   margin-bottom: 10px;
   font-family: "Raleway", sans-serif;
 }
-.left-section > h1{
+.left-section > h1 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -562,7 +561,7 @@ td {
   height: 82vh;
   overflow: hidden;
   width: 85%;
-        margin: 4rem auto 0;
+  margin: 4rem auto 0;
 }
 
 .container2 {
@@ -582,6 +581,10 @@ td {
   font-size: 50px;
   font-weight: 1000;
   margin-top: -12rem;
+}
+.left-section > h2 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .left-section > h1 > span {
@@ -631,29 +634,37 @@ td {
 }
 
 #tandc {
+  font-family: "Avenir LT Pro 200", sans-serif;
+  font-size: 16px;
+  color: #191818;
+  font-weight: 100;
+}
+
+.text-container {
   width: 85%;
   margin: 4rem auto 0;
 }
 .text-container > h2 {
   font-size: 2rem;
   font-weight: bold;
+  font-family: Raleway, sans-serif;
 }
 
-#bike-rental{
+#bike-rental {
   width: 85%;
-        margin: 4rem auto 0;
+  margin: 4rem auto 0;
 }
-#contact{
+#contact {
   width: 85%;
-        margin: 4rem auto 0;
+  margin: 4rem auto 0;
 }
 
-#tours{
+#tours {
   width: 85%;
-        margin: 4rem auto 0;
+  margin: 4rem auto 0;
 }
 .para-light {
-  font-family: 'Avenir LT Pro 200', sans-serif;                                       
+  font-family: "Avenir LT Pro 200", sans-serif;
   font-size: 16px;
   color: #191818;
   font-weight: 100;
@@ -742,11 +753,11 @@ td {
   flex-wrap: wrap;
   padding: 0.5rem;
   width: 100%;
+  margin-left: 3rem;
 }
 .box {
   background-color: black;
   box-sizing: border-box;
-  
 }
 .box p {
   color: #ffffff;
@@ -807,7 +818,6 @@ td {
   color: #ffffff;
 }
 
-
 .tours-last {
   display: flex;
   width: 100%;
@@ -829,15 +839,13 @@ td {
   width: 100%;
   margin: 0 auto;
   margin-top: 2rem;
-  
+
   margin-top: 0;
 }
 .im img {
-  
   height: 100%;
   object-fit: fill;
   width: 100%;
-  
 }
 @media screen and (min-width: 768px) {
   .includes,
@@ -863,27 +871,27 @@ td {
   }
 }
 
-@media screen and (max-width: 450px){
-  .tours-bottom{
+@media screen and (max-width: 450px) {
+  .tours-bottom {
     display: block;
     height: 100vh;
   }
-  .includes{
+  .includes {
     margin-left: 0;
     padding: 2rem;
   }
-  .excludes{
+  .excludes {
     margin-right: 0;
     padding: 4rem;
   }
-  .tours-last{
+  .tours-last {
     display: block;
   }
-  .or{
+  .or {
     width: 100%;
     margin: 0 auto;
   }
-  .im{
+  .im {
     width: 100%;
   }
 }
