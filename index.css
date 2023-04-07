@@ -469,6 +469,9 @@ td {
     justify-content: space-around;
     margin-left: 10px;
   }
+  .middle-black-bar{
+    margin-top: -1.3rem;
+  }
 }
 
 /* Bike-rental */
@@ -853,6 +856,11 @@ td {
 
   .box img {
     height: auto;
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: 15.5rem;
   }
 }
 
