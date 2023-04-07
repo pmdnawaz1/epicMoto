@@ -36,7 +36,8 @@ h3 {
   background-color: white;
   padding: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 .logo img {
@@ -258,7 +259,6 @@ h3 {
     background-size: 50%;
     padding: 0 5px;
     word-wrap: break-word;
-    height: 75px;
   }
   .middle-black-bar h1 {
     font-size: 2rem;
@@ -315,7 +315,7 @@ h3 {
     height: 400px;
   }
   .middle-black-bar h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-align: center;
   }
 }
@@ -561,7 +561,7 @@ td {
 .container1 {
   height: 82vh;
   overflow: hidden;
-  width: 85%;
+  /* width: 85%; */
 }
 
 .container2 {
@@ -752,14 +752,13 @@ td {
 }
 
 /* Tours boxes */
-.box-container {
+/* .box-container {
   display: flex;
   gap: 1.5rem;
   margin: 0 auto;
   flex-wrap: wrap;
   padding: 0.5rem;
   width: 100%;
-  margin-left: 3rem;
 }
 .box {
   background-color: black;
@@ -784,7 +783,70 @@ td {
     padding: 0;
     margin: 0;
   }
+} */
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
 }
+
+.box {
+  flex-basis: 30%;
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 500px; /* set a fixed height for .box */
+}
+
+.box * {
+  overflow: hidden; /* prevent child elements from overflowing */
+}
+
+.box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.box a{
+  padding: 0.5rem;
+}
+
+.box p {
+  color: #ffffff;
+  padding:  0.7rem;
+}
+
+.box h3 {
+  padding: 0.7rem;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .box {
+    flex-basis: 80%;
+    height: auto; /* reset height for smaller screens */
+  }
+
+  .box img {
+    height: auto;
+  }
+}
+
 
 .tours-bottom {
   width: 100%;
