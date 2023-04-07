@@ -562,7 +562,6 @@ td {
   height: 82vh;
   overflow: hidden;
   width: 85%;
-  margin: 4rem auto 0;
 }
 
 .container2 {
@@ -593,12 +592,13 @@ td {
   text-decoration: underline;
   font-weight: bold;
   font-size: 50px;
+  width: 85%;
+  margin: 4rem auto 0;
 }
 
 .right-section1 {
   flex: 1 0 350px;
   box-sizing: border-box;
-
   z-index: -1;
 }
 
@@ -824,7 +824,6 @@ td {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 .or a {
   color: black;
@@ -867,6 +866,30 @@ td {
 }
 
 @media screen and (max-width: 450px) {
+  .tours-bottom {
+    display: block;
+    height: 100vh;
+  }
+  .includes {
+    margin-left: 0;
+    padding: 2rem;
+  }
+  .excludes {
+    margin-right: 0;
+    padding: 4rem;
+  }
+  .tours-last {
+    display: block;
+  }
+  .or {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .im {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
   .tours-bottom {
     display: block;
     height: 100vh;
