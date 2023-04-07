@@ -766,23 +766,6 @@ td {
 .box h3 {
   padding: 5px;
 }
-.box-container1 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 0 auto;
-  padding: 0.5rem;
-}
-.box {
-  background-color: black;
-}
-.box p {
-  color: #ffffff;
-  padding: 5px;
-}
-.box h3 {
-  padding: 5px;
-}
 
 @media (max-width: 300px) {
   .box-container1 {
