@@ -1,279 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Spiti motorbike trip</title>
-  </head>
 
-  <body>
-    <div id="navigation-bar" class="nav-bar">
-      <a
-        id="home-link"
-        href="#home"
-        class="active"
-        onclick="showPage('home');hideNavBar()"
-        >Home</a
-      >
-      <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()"
-        >Tours</a
-      >
-      <a
-        id="bike-rental-link"
-        href="#bike-rental"
-        onclick="showPage('bike-rental');hideNavBar()"
-        >Bike Rentals</a
-      >
-      <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()"
-        >Terms and conditions</a
-      >
-      <a
-        id="contact-link"
-        href="#contact"
-        onclick="showPage('contact');hideNavBar()"
-        >Contact us</a
-      >
-      <button class="b1">8894777300|info@epicmototours.com</button>
-      <button class="b2">Contact</button>
-      <script>
-        function onMenuClick() {
-          var navbar = document.getElementById("navigation-bar");
-          var content = document.getElementById("content");
-          var responsive_class_name = "responsive";
-  
-          navbar.classList.toggle(responsive_class_name);
-          content.style.display = "block";
-        }
-  
-        function hideNavBar() {
-          var navbar = document.getElementById("navigation-bar");
-          var content = document.getElementById("content");
-          var responsive_class_name = "responsive";
-  
-          navbar.classList.remove(responsive_class_name);
-          content.style.display = "none";
-        }
-        function showPage(pageId) {
-          const pageContents = document.getElementsByClassName("content");
-          for (let i = 0; i < pageContents.length; i++) {
-            if (pageContents[i].id === pageId) {
-              pageContents[i].style.display = "block";
-            } else {
-              pageContents[i].style.display = "none";
-            }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Spiti motorbike trip</title>
+</head>
+
+<body>
+  <div id="navigation-bar" class="nav-bar">
+    <a id="home-link" href="#home" class="active" onclick="showPage('home');hideNavBar()">Home</a>
+    <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()">Tours</a>
+    <a id="bike-rental-link" href="#bike-rental" onclick="showPage('bike-rental');hideNavBar()">Bike Rentals</a>
+    <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()">Terms and conditions</a>
+    <a id="contact-link" href="#contact" onclick="showPage('contact');hideNavBar()">Contact us</a>
+    <button class="b1">8894777300|info@epicmototours.com</button>
+    <button class="b2">Contact</button>
+    <script>
+      function onMenuClick() {
+        var navbar = document.getElementById("navigation-bar");
+        var content = document.getElementById("content");
+        var responsive_class_name = "responsive";
+
+        navbar.classList.toggle(responsive_class_name);
+        content.style.display = "block";
+      }
+
+      function hideNavBar() {
+        var navbar = document.getElementById("navigation-bar");
+        var content = document.getElementById("content");
+        var responsive_class_name = "responsive";
+
+        navbar.classList.remove(responsive_class_name);
+        content.style.display = "none";
+      }
+      function showPage(pageId) {
+        const pageContents = document.getElementsByClassName("content");
+        for (let i = 0; i < pageContents.length; i++) {
+          if (pageContents[i].id === pageId) {
+            pageContents[i].style.display = "block";
+          } else {
+            pageContents[i].style.display = "none";
           }
         }
-      </script>
-    </div>
-    
-    <div>
-      <img src="/Images/toursbox/head1.webp" style="width: 100%" />
-    </div>
-    <div class="top-br">
-      <h1>Spiti motorbike trip</h1>
-      <p class="para-light">
-        Place for an adventure motorcyclist, stunningly beautiful, lush green to
-        barren mountains to lush green again. On the way visiting some of the
-        oldest Buddhist monasteries for a rich cultural experience and staying
-        in isolated villages. Ride across three high-altitude passes, visit the
-        highest villages in the world .
-      </p>
-      <div style="text-align: left">
-        <span><h3>Departure Date:</h3><p>june 15, july 1, july 15, august 1 august 15 september 1, september 15</p></span>
-        
+      }
+    </script>
+  </div>
 
-        <h3>Duration:</h3>
-        9 days
-      </div>
+  <div>
+    <img src="/Images/toursbox/head1.webp" style="width: 100%" />
+  </div>
+  <div class="top-br">
+    <h1>Spiti motorbike trip</h1>
+    <p class="para-light">
+      Place for an adventure motorcyclist, stunningly beautiful, lush green to
+      barren mountains to lush green again. On the way visiting some of the
+      oldest Buddhist monasteries for a rich cultural experience and staying
+      in isolated villages. Ride across three high-altitude passes, visit the
+      highest villages in the world .
+    </p>
+    <div style="text-align: left">
+      <span>
+        <h3>Departure Date:</h3>
+        <p>june 15, july 1, july 15, august 1 august 15 september 1, september 15</p>
+      </span>
+
+
+      <h3>Duration:</h3>
+      9 days
     </div>
-    <h2>Detailed itinerary</h2>
-    <section>
-      <div class="timeline">
-        <div class="entry">
-          <div class="title">
+  </div>
+  <h2>Detailed itinerary</h2>
+  <section>
+    <div class="timeline">
+      <div class="entry">
+        <div class="title">
+          <h3>
+            Day 1: Motorbike Test Ride and Tour Introduction. (50kms, 3 hours)
+          </h3>
+        </div>
+        <div class="body">
+          <div class="title1">
             <h3>
               Day 1: Motorbike Test Ride and Tour Introduction. (50kms, 3 hours)
             </h3>
           </div>
-          <div class="body">
-            <div class="title1">
-              <h3>
-                Day 1: Motorbike Test Ride and Tour Introduction. (50kms, 3 hours)
-              </h3>
-            </div>
-            <p class="para-light">
-              Arrive manali and check into hotel. After Lunch you will be
-              introduced to your motorcycles. You will then be given a short
-              hand on to the bike and you can take the bike for a short ride so
-              that you can test the bike yourself. Towards the evening you would
-              be given the tour introduction by the tour leader and in case you
-              need to buy something you may get it from the market.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 2: Manali to Sojha (109 kms, 5 hours)</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 2: Manali to Sojha (109 kms, 5 hours)</h3>
-            </div>
-            <p class="para-light">
-              Today after breakfast you start your journey in the Himalayas on
-              your motorcycles from Manali towards Banjar Valley to Sojha. On
-              the way we would cross Kullu Valley also known as the valley of
-              gods and from Aut, we would divert towards the Banjar Valley.
-              Banjar Valley is a hub of many beautiful places in Himachal that
-              still remains unexplored by the tourists. After crossing Jibhi we
-              reach Sojha. This is where our day ends for today and after a
-              hearty meal, we rest overnight.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 3: Sojha to Sarahan (124 kms, 5 hours)</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 3: Sojha to Sarahan (124 kms, 5 hours)</h3>
-            </div>
-            <p class="para-light">
-              After breakfast, we move from Sojha towards Sarahan, a small
-              village which is the site of the Bhimakali Temple, originally
-              known as Bhimadevi Temple, dedicated to the mother goddess
-              Bhimakali. The temple is known to be around 800 years old. Dinner
-              & overnight stay in the temple guest house.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 4: Sarahan to Sangla (83kms, 5 hours)</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 4: Sarahan to Sangla (83kms, 5 hours)</h3>
-            </div>
-            <p class="para-light">
-              Today we start our journey from Sarahan to Sangla enroute Thach,
-              Karcham Dam and Shaung. The valley is one of the most beautiful
-              valley in the country. The place feature houses and temples that
-              are built in Kinnuari wood and stone style. Sangla valley is
-              covered with dense forest slopes and apple orchards. The most
-              significant achievement of this region which is worth laudable is
-              that this area boasts of growing the world's best quality apples.
-              After reaching Sangla, dinner and rest overnight.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 5: Sangla to Nako (170kms, 7 hours)</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 5: Sangla to Nako (170kms, 7 hours)</h3>
-            </div>
-            <p class="para-light">
-              After breakfast, today we will go towards Chitkul, last village of
-              the region, a beautiful village untouched by tourists. We ride
-              towards Recong Peo, get our permits ready. Then enroute visiting
-              the confluence of river Satluj and Spiti at Khab. Nako, is a small
-              village near to the Indo-China Border. Upon reaching Nako in the
-              evening, after check-in you are free to explore Nako village is
-              located on the banks of Nako Lake. In Nako you can visit Nako
-              Monastery, dated to 1025, as well as several other Buddhist
-              chortens. Along with that you can visit Nako Lake which is
-              believed to have the foot print of Padmasambhava. Another feature
-              of this lake is that it freezes in the winters and people use it
-              for ice skating practice.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 6: Nako to Kaza (111 kms, 5 hours)</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 6: Nako to Kaza (111 kms, 5 hours)</h3>
-            </div>
-            <p class="para-light">
-              After an early breakfast, we ride towards Kaza along the Spiti
-              River. Enroute we would visit Tabo Monastery, which was founded in
-              996AD by the great teacher Richensang- Po. The monastery has nine
-              temples, four decorated stupas, and several cave shrines adorned
-              with frescoes and contemporary structures too. From here we
-              continue towards Dhankar. Here we have Dhankar monastery which
-              stands high over the valley and is a stupendous example of local
-              architecture. This monastery was once a fort and was the residence
-              of the ruler of Spiti. After this we move directly to Kaza. Dinner
-              & overnight stay.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 7: Kaza-chandertal (108kms, 4 hours)</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 7: Kaza-chandertal (108kms, 4 hours)</h3>
-            </div>
-            <p class="para-light">
-              Today after breakfast you start your journey in the Himalayas on
-              your motorcycles from Kaza to Chandertal crossing kunzum pass,
-              taking some off beat tracks we reach our camp. Evening time one
-              may have a small walk towards chandertal and enjoy its beauty.
-              Dinner & overnight at camps.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 8: Chandertal- Manali (90kms, 6 hours)</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 8: Chandertal- Manali (90kms, 6 hours)</h3>
-            </div>
-            <p class="para-light">
-              Today will be the most adventurous day as we will be riding on the
-              most offroad tracks. crossing many water crossings and dusty
-              roads. After we reach the Khoksar we will get good roads, soon we
-              cross through Atal tunnel and finally see greenary as we reach
-              Manali. Check into hotel.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 9: Tour ends</h3>
-          </div>
-          <div class="body">
-            <div class="title1">
-              <h3>Day 9: Tour ends</h3>
-            </div>
-            <p class="para-light">Check out hotel by 12 noon.</p>
-          </div>
+          <p class="para-light">
+            Arrive manali and check into hotel. After Lunch you will be
+            introduced to your motorcycles. You will then be given a short
+            hand on to the bike and you can take the bike for a short ride so
+            that you can test the bike yourself. Towards the evening you would
+            be given the tour introduction by the tour leader and in case you
+            need to buy something you may get it from the market.
+          </p>
         </div>
       </div>
-    </section>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 2: Manali to Sojha (109 kms, 5 hours)</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 2: Manali to Sojha (109 kms, 5 hours)</h3>
+          </div>
+          <p class="para-light">
+            Today after breakfast you start your journey in the Himalayas on
+            your motorcycles from Manali towards Banjar Valley to Sojha. On
+            the way we would cross Kullu Valley also known as the valley of
+            gods and from Aut, we would divert towards the Banjar Valley.
+            Banjar Valley is a hub of many beautiful places in Himachal that
+            still remains unexplored by the tourists. After crossing Jibhi we
+            reach Sojha. This is where our day ends for today and after a
+            hearty meal, we rest overnight.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 3: Sojha to Sarahan (124 kms, 5 hours)</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 3: Sojha to Sarahan (124 kms, 5 hours)</h3>
+          </div>
+          <p class="para-light">
+            After breakfast, we move from Sojha towards Sarahan, a small
+            village which is the site of the Bhimakali Temple, originally
+            known as Bhimadevi Temple, dedicated to the mother goddess
+            Bhimakali. The temple is known to be around 800 years old. Dinner
+            & overnight stay in the temple guest house.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 4: Sarahan to Sangla (83kms, 5 hours)</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 4: Sarahan to Sangla (83kms, 5 hours)</h3>
+          </div>
+          <p class="para-light">
+            Today we start our journey from Sarahan to Sangla enroute Thach,
+            Karcham Dam and Shaung. The valley is one of the most beautiful
+            valley in the country. The place feature houses and temples that
+            are built in Kinnuari wood and stone style. Sangla valley is
+            covered with dense forest slopes and apple orchards. The most
+            significant achievement of this region which is worth laudable is
+            that this area boasts of growing the world's best quality apples.
+            After reaching Sangla, dinner and rest overnight.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 5: Sangla to Nako (170kms, 7 hours)</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 5: Sangla to Nako (170kms, 7 hours)</h3>
+          </div>
+          <p class="para-light">
+            After breakfast, today we will go towards Chitkul, last village of
+            the region, a beautiful village untouched by tourists. We ride
+            towards Recong Peo, get our permits ready. Then enroute visiting
+            the confluence of river Satluj and Spiti at Khab. Nako, is a small
+            village near to the Indo-China Border. Upon reaching Nako in the
+            evening, after check-in you are free to explore Nako village is
+            located on the banks of Nako Lake. In Nako you can visit Nako
+            Monastery, dated to 1025, as well as several other Buddhist
+            chortens. Along with that you can visit Nako Lake which is
+            believed to have the foot print of Padmasambhava. Another feature
+            of this lake is that it freezes in the winters and people use it
+            for ice skating practice.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 6: Nako to Kaza (111 kms, 5 hours)</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 6: Nako to Kaza (111 kms, 5 hours)</h3>
+          </div>
+          <p class="para-light">
+            After an early breakfast, we ride towards Kaza along the Spiti
+            River. Enroute we would visit Tabo Monastery, which was founded in
+            996AD by the great teacher Richensang- Po. The monastery has nine
+            temples, four decorated stupas, and several cave shrines adorned
+            with frescoes and contemporary structures too. From here we
+            continue towards Dhankar. Here we have Dhankar monastery which
+            stands high over the valley and is a stupendous example of local
+            architecture. This monastery was once a fort and was the residence
+            of the ruler of Spiti. After this we move directly to Kaza. Dinner
+            & overnight stay.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 7: Kaza-chandertal (108kms, 4 hours)</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 7: Kaza-chandertal (108kms, 4 hours)</h3>
+          </div>
+          <p class="para-light">
+            Today after breakfast you start your journey in the Himalayas on
+            your motorcycles from Kaza to Chandertal crossing kunzum pass,
+            taking some off beat tracks we reach our camp. Evening time one
+            may have a small walk towards chandertal and enjoy its beauty.
+            Dinner & overnight at camps.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 8: Chandertal- Manali (90kms, 6 hours)</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 8: Chandertal- Manali (90kms, 6 hours)</h3>
+          </div>
+          <p class="para-light">
+            Today will be the most adventurous day as we will be riding on the
+            most offroad tracks. crossing many water crossings and dusty
+            roads. After we reach the Khoksar we will get good roads, soon we
+            cross through Atal tunnel and finally see greenary as we reach
+            Manali. Check into hotel.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 9: Tour ends</h3>
+        </div>
+        <div class="body">
+          <div class="title1">
+            <h3>Day 9: Tour ends</h3>
+          </div>
+          <p class="para-light">Check out hotel by 12 noon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tours-section">
+    <h2>Tour includes</h2>
     <div class="tours-bottom">
       <div class="includes">
         <ul>
-          <h2 style="color: white">Tour Package Includes</h2>
           <li>Transportation from airport to hotel visa versa</li>
           <li>
             Accommodation on twin sharing basis with breakfast and dinner.
@@ -288,11 +270,10 @@
           <li>Bottled water.</li>
           <li>Full motorbike Insurance.</li>
         </ul>
-        <hr class="line" />
       </div>
       <div class="excludes" style="color: white">
-        <h2 style="color: white"> Excludes</h2>
         <ul>
+          <h2 style="color: white"> Excludes</h2>
           <li>Any beverages, lunch and table tips.</li>
           <li>Any cost due to force majeure.</li>
           <li>Any travel outside the itinerary.</li>
@@ -300,17 +281,21 @@
         </ul>
       </div>
     </div>
-    <div class="tours-last">
-      <div class="or">
-        <div><h2>Let's Get Social</h2></div>
-        <div><button class="b2">Contact Us</button></div>
-        <div><a href="https://facebook.com/epicmototours" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/epicmototours" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-youtube"></a></div>
-        
-      </div>
-      <div class="im"><img src="/Images/c.jpg"</div>
+  </section>
+  <div class="or">
+    <div>
+      <h2>Let's Get Social</h2>
     </div>
-  </body>
+    <div><button class="b2">Contact Us</button></div>
+    <div><a href="https://facebook.com/epicmototours" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/epicmototours" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-youtube"></a>
+    </div>
+
+  </div>
+  <div class="im"><img src="/Images/c.jpg" </div>
+  </div>
+</body>
+
 </html>

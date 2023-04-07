@@ -55,7 +55,7 @@ body > h2 {
 .timeline:before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: 0px;
   left: calc(33% + 15px);
   bottom: 0px;
   width: 1px;

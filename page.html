@@ -1,393 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="index.css" />
-    <title>The Great Himalayan Motorcycle Tour</title>
-  </head>
 
-  <body>
-    <div id="navigation-bar" class="nav-bar">
-      <a
-        id="home-link"
-        href="#home"
-        class="active"
-        onclick="showPage('home');hideNavBar()"
-        >Home</a
-      >
-      <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()"
-        >Tours</a
-      >
-      <a
-        id="bike-rental-link"
-        href="#bike-rental"
-        onclick="showPage('bike-rental');hideNavBar()"
-        >Bike Rentals</a
-      >
-      <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()"
-        >Terms and conditions</a
-      >
-      <a
-        id="contact-link"
-        href="#contact"
-        onclick="showPage('contact');hideNavBar()"
-        >Contact us</a
-      >
-      <button class="b1">8894777300|info@epicmototours.com</button>
-      <button class="b2">Contact</button>
-      <script>
-        function onMenuClick() {
-          var navbar = document.getElementById("navigation-bar");
-          var content = document.getElementById("content");
-          var responsive_class_name = "responsive";
-  
-          navbar.classList.toggle(responsive_class_name);
-          content.style.display = "block";
-        }
-  
-        function hideNavBar() {
-          var navbar = document.getElementById("navigation-bar");
-          var content = document.getElementById("content");
-          var responsive_class_name = "responsive";
-  
-          navbar.classList.remove(responsive_class_name);
-          content.style.display = "none";
-        }
-        function showPage(pageId) {
-          const pageContents = document.getElementsByClassName("content");
-          for (let i = 0; i < pageContents.length; i++) {
-            if (pageContents[i].id === pageId) {
-              pageContents[i].style.display = "block";
-            } else {
-              pageContents[i].style.display = "none";
-            }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css" />
+  <title>The Great Himalayan Motorcycle Tour</title>
+</head>
+
+<body>
+  <div id="navigation-bar" class="nav-bar">
+    <a id="home-link" href="#home" class="active" onclick="showPage('home');hideNavBar()">Home</a>
+    <a id="tours-link" href="#tours" onclick="showPage('tours');hideNavBar()">Tours</a>
+    <a id="bike-rental-link" href="#bike-rental" onclick="showPage('bike-rental');hideNavBar()">Bike Rentals</a>
+    <a id="tandc-link" href="#tandc" onclick="showPage('tandc');hideNavBar()">Terms and conditions</a>
+    <a id="contact-link" href="#contact" onclick="showPage('contact');hideNavBar()">Contact us</a>
+    <button class="b1">8894777300|info@epicmototours.com</button>
+    <button class="b2">Contact</button>
+    <script>
+      function onMenuClick() {
+        var navbar = document.getElementById("navigation-bar");
+        var content = document.getElementById("content");
+        var responsive_class_name = "responsive";
+
+        navbar.classList.toggle(responsive_class_name);
+        content.style.display = "block";
+      }
+
+      function hideNavBar() {
+        var navbar = document.getElementById("navigation-bar");
+        var content = document.getElementById("content");
+        var responsive_class_name = "responsive";
+
+        navbar.classList.remove(responsive_class_name);
+        content.style.display = "none";
+      }
+      function showPage(pageId) {
+        const pageContents = document.getElementsByClassName("content");
+        for (let i = 0; i < pageContents.length; i++) {
+          if (pageContents[i].id === pageId) {
+            pageContents[i].style.display = "block";
+          } else {
+            pageContents[i].style.display = "none";
           }
         }
-      </script>
+      }
+    </script>
+  </div>
+
+  <div>
+    <img src="/Images/toursbox/head1.webp" style="width: 100%" />
+  </div>
+  <div class="top-br para-light">
+    <h1>The Great Himalayan Motorcycle Tour</h1>
+    <p class="para-light">
+      Pack your belongings and grab your favourite ride. Take hold of your
+      enthusiasm and desire for an amicable, breezy experience. The expedition
+      will soon set out for the region of snow-capped mountains often referred
+      to as the Valley of Gods.
+    </p>
+    <div style="text-align: left; margin-top: 1rem">
+      <span>
+        <h3>Departure Date:</h3>june 2 & august 29
+      </span>
+      <br />
+      <h3>Duration:</h3>
+      22 days
     </div>
-    
-    <div>
-      <img src="/Images/toursbox/head1.webp" style="width: 100%" />
-    </div>
-    <div class="top-br para-light">
-      <h1>The Great Himalayan Motorcycle Tour</h1>
-      <p class="para-light">
-        Pack your belongings and grab your favourite ride. Take hold of your
-        enthusiasm and desire for an amicable, breezy experience. The expedition
-        will soon set out for the region of snow-capped mountains often referred
-        to as the Valley of Gods.
-      </p>
-      <div style="text-align: left; margin-top: 1rem">
-        <span><h3>Departure Date:</h3>june 2 & august 29</span>
-         <br />
-        <h3>Duration:</h3>
-        22 days
-      </div>
-    </div>
-    <h2>Detailed itinerary</h2>
-    <section>
-      <div class="timeline">
-        <div class="entry">
-          <div class="title">
-            <h3>Day 1: Arrival at Delhi Airport</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              This would be the day you arrive at Delhi Airport. Transportation
-              would be provided from Airport till the hotel. As per our
-              programme you are supposed to rest at the hotel. But, if you
-              arrive early and wish to travel you may do the sight seeing in
-              Delhi (own expence).
-            </p>
-          </div>
+  </div>
+  <h2>Detailed itinerary</h2>
+  <section>
+    <div class="timeline">
+      <div class="entry">
+        <div class="title">
+          <h3>Day 1: Arrival at Delhi Airport</h3>
         </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 2: Delhi to Manali</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              This entire day would be spent travelling as its 10 hours drive
-              from Delhi to Manali. Depending on the strength of the group you
-              would be provided cabs or a volvo bus.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 3. Manali test ride</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              You will be introduced to your motorcycles today, we will then be
-              giving you a shorthand on to the bike and you can take the bike
-              for a ride so that you can test the bike yourself. Towards the
-              evening you would be given the tour introduction by the tour
-              leader. Evening would be a leisure time so everyone would be free
-              to do whatever little shopping or other sight seeing that one
-              wishes for.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 4. Manali to dharamshala</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              Today would be a long day so we try and start a bit early. We
-              would be following the river beas till bhunter on National highway
-              and then after we take the kandi road which will take us through
-              less crowded roads giving us a glimpse of Himachal village
-              lifestyle. After riding on these off beat tracks we will soon find
-              ourselves on highway travelling throught the beautiful dharamshala
-              forests. Evening we relax and prepare for next days ride.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 5. Dharamshala to Khajjiar</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              This day would be a bit relaxed one so no need to start early
-              morning. Just like the day before the ride would be a bit warm. We
-              would be travelling through the dauladhar range which are not very
-              high mountains but small beautiful hills. Entering the chamba
-              valley we reach khajjiar which has a small beautiful lake in the
-              centre and is surrounded by thick forest all around. We halt here
-              for a night.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 6. Khajjiar to bairagarh.</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              We would be travelling in Chamba district today. Not a very hectic
-              day but a beautiful ride with less trafic and minimum tourists.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 7. Bairagarh to Killar</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              By now everyone is well aquainted to the bike so lets start
-              travelling on sum bumpy slippery roads. We start our climb up
-              towards sach pass. We pass by untouched forests and many water
-              falls soon crossing the tree line and entering the rocky area.
-              Cold winds and fog everywhere wouldn&#39;t be a surprise. After
-              reaching sach pass we now prepare for downhill all the way to
-              killar.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 8. Killar to Kishtwar</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              This would be the most adventurous day. Travelling through the
-              road that the faint hearted don&#39;t dare as there is mountain on
-              one side and thousand feet drop on the other with no railing or
-              safety in between. To make things more challenging the road is
-              filled with dust, rock and mud. Travelling slowly and safely we
-              reach towards Kishtwar and halt for the night.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 9. Kishtwar to Srinagar.</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              After yesterdays adventure today we travel on much better roads.
-              Entering Kashmir we make our way towards Srinagar enjoying the
-              scenic beauty.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 10. Srinagar local sight seeing</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              Today we do the local sight seeing of Srinagar. Visit the famous
-              dal lake and gardens of Kashmir. Take it light for the day and
-              rest in the evening.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 11. Srinagar to Kargil</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              Again a very beautiful day for a road trip travelling through
-              meadows, passing by sonmarg we cross over Zozila pass and Enter
-              Kargil.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 12. Kargil to Padum</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              We start early today as its a bumpy ride. We start for a few hours
-              on tarmack as we pass by suru valley. Soon the smooth lovely
-              tarmac is left behing and we enter the dry region of Zanskar.
-              Passing by Nun Kun galcier we would be riding on dusty trails
-              surronded by grass and on both side we can see the mighty
-              Himalayas. Some more bumps for few hours and we reach Rangdum
-              where we stretch and relax for sometime. Then we start our climb
-              for Penzila pass. Just as we cross Penzila pass we will be
-              witnessing a very big glacier, the drang drung Glacier which is
-              many miles long. Soon after we decend a bit and travel for a few
-              more hours and finally reach Padum.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 13. Padum</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              After a relaxed morning we will go for some sight seeing around
-              Padum. We will visit Karsha Monastery which is one of the oldest
-              monastery of the region and has an amazing view of the Zanskar
-              Valley. Evening is free to roam the streets of Padum.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 14: Padum to Purnay</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              Today we start early but travel less. By lunch time we would reach
-              Purnay. We reach early so that we reach purnay by lunch time. Soon
-              after the riders interested can go for a hike till Phuktal
-              monastery. Before night fall we come back and sleep in our tents.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 15. Purnay to Jispa</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              Today it is very important to leave early as we have to cross some
-              streams and if we are late then the water levels may rise and we
-              might not be able to cross it. So we have an early start and
-              travel in the dry lands of Zanskar. Passing by gombo rangjum we
-              now start our accent towards shinkula pass. It&#39;s quite a steep
-              climb up the pass but not before long we would be up there. Click
-              a few pictures and we start decending towards Jispa.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 16. Jispa to Sarchu</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              After breakfast we start our jouney. On the way we have a few
-              watercrossings (depending on the weather), we would be passing by
-              two lakes Deepak tal and Suraj tal aswell. Baralacha is one of the
-              most dangerous passes as the weather here is unpredictable and it
-              snows a lot here. So we cross it and then ride on the plains of
-              Sarchu till we reach our camps for the night.
-            </p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="title">
-            <h3>Day 17. Sarchu to Leh.</h3>
-          </div>
-          <div class="body">
-            <p class="para-light">
-              Today would be bit longer then rest of the days so we start early.
-              We would we welcomed by the ghata loops, a total of 22 loops till
-              we reach Nakeela pass, take a dip and then climb up agian to reach
-              lanchugla pass. Passing by some beautiful dry scenery we reach
-              pang and halt for lunch. After lunch we soon find ourself riding
-              on more plains. You will see how the roof of the world looks like.
-              More plains goes on for miles. It&#39;s just flat for miles at
-              such great altitude. We now have to conqure the worlds second
-              highest motorable pass, Taglangla. We now start desceding passing
-              by narrow gorge with roads filled with turns all the way. Before
-              we reach Leh the gorge opens and welcomes us by showing a glimpse
-              of beautiful ladakh.
-            </p>
-          </div>
+        <div class="body">
+          <p class="para-light">
+            This would be the day you arrive at Delhi Airport. Transportation
+            would be provided from Airport till the hotel. As per our
+            programme you are supposed to rest at the hotel. But, if you
+            arrive early and wish to travel you may do the sight seeing in
+            Delhi (own expence).
+          </p>
         </div>
       </div>
-    </section>
-    <div class="tours-bottom">
-      <div class="includes">
-        <ul>
-          <h2 style="color: white">Tour Package Includes</h2>
-          <li>Transportation from airport to hotel visa versa</li>
-          <li>
-            Accommodation on twin sharing basis with breakfast and dinner.
-          </li>
-          <li>One Royal Enfield himalayan per rider.</li>
-          <li>
-            Backup Vehicle with mechanic, basic spare parts and medical Kit.
-          </li>
-          <li>All Toll, Taxes and Permits.</li>
-          <li>Fuel for the entire journey</li>
-          <li>Professional Road Captain as guide.</li>
-          <li>Bottled water.</li>
-          <li>Full motorbike Insurance.</li>
-        </ul>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 2: Delhi to Manali</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            This entire day would be spent travelling as its 10 hours drive
+            from Delhi to Manali. Depending on the strength of the group you
+            would be provided cabs or a volvo bus.
+          </p>
+        </div>
       </div>
-      <hr class="line" />
-      <div class="excludes" style="color: white">
-        <h2 style="color: white">Tour Package Excludes</h2>
-        <ul>
-          <li>Any beverages, lunch and table tips.</li>
-          <li>Any cost due to force majeure.</li>
-          <li>Any travel outside the itinerary.</li>
-          <li>Anything not mentioned in includes.</li>
-        </ul>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 3. Manali test ride</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            You will be introduced to your motorcycles today, we will then be
+            giving you a shorthand on to the bike and you can take the bike
+            for a ride so that you can test the bike yourself. Towards the
+            evening you would be given the tour introduction by the tour
+            leader. Evening would be a leisure time so everyone would be free
+            to do whatever little shopping or other sight seeing that one
+            wishes for.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 4. Manali to dharamshala</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            Today would be a long day so we try and start a bit early. We
+            would be following the river beas till bhunter on National highway
+            and then after we take the kandi road which will take us through
+            less crowded roads giving us a glimpse of Himachal village
+            lifestyle. After riding on these off beat tracks we will soon find
+            ourselves on highway travelling throught the beautiful dharamshala
+            forests. Evening we relax and prepare for next days ride.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 5. Dharamshala to Khajjiar</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            This day would be a bit relaxed one so no need to start early
+            morning. Just like the day before the ride would be a bit warm. We
+            would be travelling through the dauladhar range which are not very
+            high mountains but small beautiful hills. Entering the chamba
+            valley we reach khajjiar which has a small beautiful lake in the
+            centre and is surrounded by thick forest all around. We halt here
+            for a night.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 6. Khajjiar to bairagarh.</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            We would be travelling in Chamba district today. Not a very hectic
+            day but a beautiful ride with less trafic and minimum tourists.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 7. Bairagarh to Killar</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            By now everyone is well aquainted to the bike so lets start
+            travelling on sum bumpy slippery roads. We start our climb up
+            towards sach pass. We pass by untouched forests and many water
+            falls soon crossing the tree line and entering the rocky area.
+            Cold winds and fog everywhere wouldn&#39;t be a surprise. After
+            reaching sach pass we now prepare for downhill all the way to
+            killar.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 8. Killar to Kishtwar</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            This would be the most adventurous day. Travelling through the
+            road that the faint hearted don&#39;t dare as there is mountain on
+            one side and thousand feet drop on the other with no railing or
+            safety in between. To make things more challenging the road is
+            filled with dust, rock and mud. Travelling slowly and safely we
+            reach towards Kishtwar and halt for the night.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 9. Kishtwar to Srinagar.</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            After yesterdays adventure today we travel on much better roads.
+            Entering Kashmir we make our way towards Srinagar enjoying the
+            scenic beauty.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 10. Srinagar local sight seeing</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            Today we do the local sight seeing of Srinagar. Visit the famous
+            dal lake and gardens of Kashmir. Take it light for the day and
+            rest in the evening.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 11. Srinagar to Kargil</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            Again a very beautiful day for a road trip travelling through
+            meadows, passing by sonmarg we cross over Zozila pass and Enter
+            Kargil.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 12. Kargil to Padum</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            We start early today as its a bumpy ride. We start for a few hours
+            on tarmack as we pass by suru valley. Soon the smooth lovely
+            tarmac is left behing and we enter the dry region of Zanskar.
+            Passing by Nun Kun galcier we would be riding on dusty trails
+            surronded by grass and on both side we can see the mighty
+            Himalayas. Some more bumps for few hours and we reach Rangdum
+            where we stretch and relax for sometime. Then we start our climb
+            for Penzila pass. Just as we cross Penzila pass we will be
+            witnessing a very big glacier, the drang drung Glacier which is
+            many miles long. Soon after we decend a bit and travel for a few
+            more hours and finally reach Padum.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 13. Padum</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            After a relaxed morning we will go for some sight seeing around
+            Padum. We will visit Karsha Monastery which is one of the oldest
+            monastery of the region and has an amazing view of the Zanskar
+            Valley. Evening is free to roam the streets of Padum.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 14: Padum to Purnay</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            Today we start early but travel less. By lunch time we would reach
+            Purnay. We reach early so that we reach purnay by lunch time. Soon
+            after the riders interested can go for a hike till Phuktal
+            monastery. Before night fall we come back and sleep in our tents.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 15. Purnay to Jispa</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            Today it is very important to leave early as we have to cross some
+            streams and if we are late then the water levels may rise and we
+            might not be able to cross it. So we have an early start and
+            travel in the dry lands of Zanskar. Passing by gombo rangjum we
+            now start our accent towards shinkula pass. It&#39;s quite a steep
+            climb up the pass but not before long we would be up there. Click
+            a few pictures and we start decending towards Jispa.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 16. Jispa to Sarchu</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            After breakfast we start our jouney. On the way we have a few
+            watercrossings (depending on the weather), we would be passing by
+            two lakes Deepak tal and Suraj tal aswell. Baralacha is one of the
+            most dangerous passes as the weather here is unpredictable and it
+            snows a lot here. So we cross it and then ride on the plains of
+            Sarchu till we reach our camps for the night.
+          </p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="title">
+          <h3>Day 17. Sarchu to Leh.</h3>
+        </div>
+        <div class="body">
+          <p class="para-light">
+            Today would be bit longer then rest of the days so we start early.
+            We would we welcomed by the ghata loops, a total of 22 loops till
+            we reach Nakeela pass, take a dip and then climb up agian to reach
+            lanchugla pass. Passing by some beautiful dry scenery we reach
+            pang and halt for lunch. After lunch we soon find ourself riding
+            on more plains. You will see how the roof of the world looks like.
+            More plains goes on for miles. It&#39;s just flat for miles at
+            such great altitude. We now have to conqure the worlds second
+            highest motorable pass, Taglangla. We now start desceding passing
+            by narrow gorge with roads filled with turns all the way. Before
+            we reach Leh the gorge opens and welcomes us by showing a glimpse
+            of beautiful ladakh.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="tours-last">
-      <div class="or">
-        <h2>Let's Get Social</h2>
-        <button class="b2">Contact Us</button>
-        <a href="https://facebook.com/epicmototours" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/epicmototours" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-youtube"></a>
-      </div>
-      <div class="im"><img src="/Images/c.jpg"</div>
+  </section>
+  <div class="tours-bottom">
+    <div class="includes">
+      <ul>
+        <h2 style="color: white">Tour Package Includes</h2>
+        <li>Transportation from airport to hotel visa versa</li>
+        <li>
+          Accommodation on twin sharing basis with breakfast and dinner.
+        </li>
+        <li>One Royal Enfield himalayan per rider.</li>
+        <li>
+          Backup Vehicle with mechanic, basic spare parts and medical Kit.
+        </li>
+        <li>All Toll, Taxes and Permits.</li>
+        <li>Fuel for the entire journey</li>
+        <li>Professional Road Captain as guide.</li>
+        <li>Bottled water.</li>
+        <li>Full motorbike Insurance.</li>
+      </ul>
     </div>
-  </body>
+    <div class="excludes" style="color: white">
+      <h2 style="color: white">Tour Package Excludes</h2>
+      <ul>
+        <li>Any beverages, lunch and table tips.</li>
+        <li>Any cost due to force majeure.</li>
+        <li>Any travel outside the itinerary.</li>
+        <li>Anything not mentioned in includes.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tours-last">
+    <div class="or">
+      <h2>Let's Get Social</h2>
+      <button class="b2">Contact Us</button>
+      <a href="https://facebook.com/epicmototours" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/epicmototours" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-youtube"></a>
+    </div>
+    <div class="im"><img src="/Images/c.jpg" </div>
+    </div>
+</body>
+
 </html>
