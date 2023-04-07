@@ -1,0 +1,43 @@
+
+.tours-section{
+  background-color: #000;
+}
+
+.tours-bottom {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  padding-block: 2rem;
+  justify-content: center;
+  gap: 2rem;
+}
+.includes,
+.excludes {
+  width: 100%;
+  max-width: 600px;
+  /* margin: 0 auto; */
+  padding: 0 20px;
+}
+.excludes {
+  /* margin-top: 2rem; */
+}
+.tours-bottom ul {
+  color: white;
+}
+.tours-bottom ul li {
+  color: #ffffff;
+}
+
+.tours-section h2{
+  text-align: initial;
+  color: white;
+}
+
+.tours-last {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
