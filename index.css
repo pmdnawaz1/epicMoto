@@ -705,7 +705,7 @@ td {
 }
 
 @media (max-width: 1072px) {
-  #navigation-bar{
+  #navigation-bar1{
     display: none;
   }
 }
